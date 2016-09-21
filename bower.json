@@ -1,0 +1,17 @@
+{
+  "name": "GDG_Developer_Fest2016",
+  "homepage": "https://github.com/Vishwajeetsinh98/GDGDevFest",
+  "authors": [
+    "Rahul Krishna <rkbalu524@gmail.com>"
+  ],
+  "description": "Where the best of Developers come together",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
