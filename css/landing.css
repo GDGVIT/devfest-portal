@@ -598,7 +598,7 @@ table {
 }
 body{
     /*background: rgb(23,22,40);*/
-    background: #ffffff;
+    background: #babcbe;;
   /*  font-family: 'Roboto', sans-serif; */
     font-family: 'Montserrat', sans-serif;
 }
@@ -670,20 +670,18 @@ body{
   text-align: center;
   color: white !important;
 }
-.cutter{
-  background: #babcbe;
+.cutter {
+  box-shadow: inset 0px 17vw 0px rgb(255,255,255);
 }
 .cutter img{
   width: 100%;
-  z-index: 9;
-  position: absolute;
+  z-index: 9999999;
 }
 
 .past-events{
-    padding-top: 18%;
     background: #babcbe;
-    position: relative;
-    margin-bottom: 220px;
+    padding-top: 00px;
+    padding-bottom: 100px;
 }
 /* label color */
 .input-field label {
@@ -820,6 +818,7 @@ nav{
     padding: 10px;
     background: white;
     height: auto;
+    margin-bottom: 0;
 }
 @media(max-width:600px)
 {
