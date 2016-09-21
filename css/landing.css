@@ -88,14 +88,9 @@
   font-size: 15px!important;
   color: black!important;
 }
-
-
-
-
-
-
-
-
+#head{
+  position: relative;
+}
 .cd-horizontal-timeline {
   opacity: 0;
   margin: 2em auto;
@@ -632,15 +627,43 @@ body{
     top:0;
     min-height: 100vh;
 }
+.astronaut{
+  position: absolute;
+  right: 15%;
+  bottom:20%;
+  transition: 5s all;
+}
+.translate-up-astro{
+  transform: translateY(50px);
+  transition: 4s all;
+}
+.translate-down-astro{
+  transform: translateY(-50px);
+  transition: 4s all;
+}
 .register-button{
     position: absolute;
-    bottom:40%;
+    bottom:35%;
     left: 0; right: 0;
     margin: auto;
     z-index: 1;
     color: white;
 }
-
+.Devfest{
+  position: absolute;
+  bottom:50%;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 500%;
+  line-height: 40%;
+}
+.Devfest span{
+  font-size: 28%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: rgba(255,255,255,0.6);
+}
 .register{
   background: -webkit-linear-gradient(#cfd0d0, #ffffff); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#cfd0d0, #ffffff); /* For Opera 11.1 to 12.0 */
@@ -834,7 +857,8 @@ nav{
 }
 
 .speaker img{
-    width: 50%; border-radius: 50%; padding: 20px;
+    width: 50%; border-radius: 50%; padding: 0px;
+    border:1px solid rgba(0,0,0,0.5);
 }
 @media only screen and (max-device-width: 600px){
     .header-image{

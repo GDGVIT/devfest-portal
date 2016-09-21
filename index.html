@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GDG Devfest '16</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,17 +15,6 @@
     <meta name="theme-color" content="#232240">
     <script src="js/jquery.min.js"></script>
     <link rel="icon" href="images/gdg.png">
-    <style>
-    body{
-      overflow-x: hidden;
-      }
-      .header-image img{
-        position: absolute;
-        left: 10%;
-        z-index: 1;
-        top: 25%;
-      }
-    </style>
 <script type="text/javascript">
      Materialize.toast("Registered Successfully!", 4000)
 </script>
@@ -39,8 +29,10 @@
   </div>
 </nav>
 <!--Header-->
-<div class="header">
+<div class="header" id="head">
+    <div class="center Devfest">Devfest' 16<br><span>Get ready for out of this world experience</span></div>
     <div class="center register-button"><a href="#register_form" class="custom-yellow-background">Register</a></div>
+    <div class="astronaut"><img src="images/Astronaut.png"></div>
 </div>
 <!--End of header-->
 <div class="graident">
@@ -86,14 +78,16 @@
     <h1 class="center heading">Speakers</h1>
     <div class="row">
     <div class="col m4 push-m2 s12 speaker center">
-        <img src="images/chadhart.jpg" class="rounded"><br>
-        Chad Hart<br>
-        CTO, Tokbox
+        <img src="images/Speaker2.jpg" class="rounded"><br>
+        Manoranjan Padhy<br>
+        Social Media & Community Manager<br>
+        Google
     </div>
     <div class="col m4 push-m2 s12 speaker center">
-        <img src="images/pragatirai.jpg" class="rounded"><br>
-        Pragati Ogal Rai<br>
-        Director, Deutsche Bank Labs
+        <img src="images/Speaker1.jpg" class="rounded"><br>
+        Ashish Rajput<br>
+        Co - Founder<br>
+        Roder.in
     </div>
     </div>
   </div>
@@ -173,8 +167,21 @@
         </div>
     </footer>
 <!-- End of Second Footer-->
+<script>
+  $(document).ready(function(){
+    astroUp();
+  });
+
+  function astroDown(){
+    $('.astronaut').removeClass('translate-down-astro');
+    $('.astronaut').addClass('translate-up-astro');
+    setTimeout(astroUp,4000);
+  }
+  function astroUp(){
+    $('.astronaut').removeClass('translate-up-astro');
+    $('.astronaut').addClass('translate-down-astro');
+    setTimeout(astroDown,3000);
+  }
+</script>
 </body>
 </html>
-<?php
-}
-?>
