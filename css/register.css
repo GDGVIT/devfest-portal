@@ -1,0 +1,106 @@
+body{
+  background: #3d424a;
+  font-family: 'Montserrat';
+}
+.background-holder{
+  background-image: url('../images/regheader2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+.background-holder img{
+  width: 50%;
+  position: relative;
+  top: 60px;
+  left: 25%;
+}
+.background-holder p{
+  text-align: center;
+  color: #aaabae;
+  font-family: 'Roboto';
+  font-weight: 300;
+  position: relative;
+  top: -50px;
+}
+.register-form-holder{
+  background: transparent;
+  padding: 0% 15%;
+}
+.register-form{
+  background: white;
+}
+.instructions{
+  background: #e3eafd;
+  text-align: center;
+  color: #7cbdfd;
+  padding: 1% 0%;
+}
+.custom-input{
+  width: 80%;
+  margin-left: 20%;
+}
+.custom-input p{
+  color: #57adfd;
+}
+.custom-input input{
+  width: 80%;
+}
+.custom-input input[type=text],.custom-input input[type=password],.custom-input input[type=email],.custom-input textarea
+{
+  font-size: 18px;
+  border: 0.5px solid #c4d3fb;
+  text-indent: 10px;
+  background: #e3eafd;
+  color: rgba(0, 0, 0,0.8);
+  margin-bottom: 20px;
+  height: 30px;
+}
+.custom-input input[type=text]:focus,.custom-input input[type=password]:focus,.custom-input input[type=email]:focus,.custom-input textarea:focus{
+  border-bottom: 1px solid #c4d3fb !important;
+  box-shadow: 0 0 0 0 #c4d3fb !important;
+}
+.custom-submit{
+  background: #4675f2;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.8% 3.5%;
+}
+.custom-submit:focus{
+  background: #4675f2;
+}
+.register-submit
+{
+  margin-top: -20px;
+}
+.problems-contact p{
+  color: white;
+  text-align: center;
+}
+.problems-contact a{
+  color: #456fe1;
+}
+input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after{
+  border-width: 3px;
+  border-color: #57adfd!important;
+}
+input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after{
+  border: #57adfd!important;
+}
+
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px){
+  .background-holder{
+    height: 30vh;
+  }
+  .background-holder img{
+    width: 100%;
+    margin-left: -25%;
+  }
+  .background-holder p{
+    top: 5px;
+  }
+  .custom-submit{
+    margin-top: 3%;
+  }
+}
