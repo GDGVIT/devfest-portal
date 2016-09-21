@@ -670,17 +670,20 @@ body{
   text-align: center;
   color: white !important;
 }
+.cutter{
+  background: #babcbe;
+}
 .cutter img{
   width: 100%;
-  z-index: 9999999;
+  z-index: 9;
   position: absolute;
 }
 
 .past-events{
-    top:220px;
     padding-top: 18%;
     background: #babcbe;
     position: relative;
+    margin-bottom: 220px;
 }
 /* label color */
 .input-field label {
