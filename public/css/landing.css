@@ -598,7 +598,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .gradient{
-  background: -webkit-linear-gradient(#cfd0d0, #ffffff); /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(#cfd0d0, #ffffff); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#cfd0d0, #ffffff); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#cfd0d0, #ffffff); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#cfd0d0, #ffffff); /* Standard syntax */
@@ -606,7 +606,7 @@ body{
 .heading{
     color:#0f1a30;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 100;
     padding-top: 0px;
     padding-bottom: 10px;
     text-shadow:6px #000;
@@ -662,7 +662,26 @@ body{
   font-size: 28%;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.95);
+}
+@media(max-width:600px)
+{
+  .Devfest{
+    bottom:60%;
+    font-size:360%;
+    z-index:1;
+  }
+  .astronaut{
+    z-index:0;
+  }
+  .custom-overlay{
+    min-height:100vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    z-index:1;
+  }
 }
 .register{
   background: -webkit-linear-gradient(#cfd0d0, #ffffff); /* For Safari 5.1 to 6.0 */
@@ -704,7 +723,6 @@ body{
 .past-events{
     background: #babcbe;
     padding-top: 00px;
-    padding-bottom: 100px;
 }
 /* label color */
 .input-field label {
@@ -830,8 +848,11 @@ nav{
     font-size: 160%;
   }
 }
+.patrons{
+
+}
 .patrons img{
-    width: 50%; border-radius: 50%; padding: 20px;
+    width: 50%; border-radius: 50%; padding: 10px;
 }
 
 .custom-blue{
@@ -983,4 +1004,26 @@ nav{
     padding: 20px !important;
     text-align: center;
     font-size: 150%;
+}
+.sponsor{
+  margin-bottom:50px;
+  font-size:150%;
+  background:transparent;
+  font-family: 'Roboto', sans-serif;
+}
+.sponsors{
+  margin-bottom:2px!important;
+}
+.patrons{
+  background:transparent;
+}
+.sponsor img{
+  margin-top:10px;
+  width:100%;
+}
+.custom-gradient{
+  background: -webkit-linear-gradient(#babcbe, #ffffff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#babcbe, #ffffff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#babcbe, #ffffff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#babcbe, #ffffff); /* Standard syntax */
 }
