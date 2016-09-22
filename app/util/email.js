@@ -39,8 +39,8 @@ console.log("signing");
         console.log("Link generated");
         var email = {
             to: [user.email],
-            from: "gdgvitvellore@gmail.com",
-            subject: "Verify your GDG Devfest'16",
+            from: "noreply@gdgvitvellore.com",
+            subject: "Email Confirmation",
             text: "Verify your GDG Devfest'16",
             html: html
         };
