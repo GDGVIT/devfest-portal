@@ -100,7 +100,7 @@ input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:a
     top: 5px;
   }
   .register-form-holder{
-    width: 70%;
+    width: 100%;
   }
   .custom-submit{
     margin-top: 3%;
