@@ -58,7 +58,7 @@ $.inject = function(module){
     if($.modules[module]){
         return module;
     }else{
-        throw new Error(`module not found ${module}`);
+        throw new Error("module not found "+module);
     }
 }
 

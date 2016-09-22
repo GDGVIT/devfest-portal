@@ -139,6 +139,7 @@ module.exports.init = function(inject){
                 res.locals.errMessage = "Registration failed. Please recheck all the fields.";
                 return res.render("register");
             }else{
+		console.log("sending mail");
                 email.sendMail(user,function(err){
                     console.log("mail sent done");
                     if(err){

@@ -45,8 +45,8 @@ body{
 .custom-input input{
   width: 80%;
 }
-.custom-input input[type=text],.custom-input input[type=password],.custom-input input[type=email],.custom-input textarea
-{
+.custom-input input[type=text],.custom-input input[type=password],.custom-input 
+input[type=email],.custom-input textarea {
   font-size: 18px;
   border: 0.5px solid #c4d3fb;
   text-indent: 10px;
@@ -55,7 +55,8 @@ body{
   margin-bottom: 20px;
   height: 30px;
 }
-.custom-input input[type=text]:focus,.custom-input input[type=password]:focus,.custom-input input[type=email]:focus,.custom-input textarea:focus{
+.custom-input input[type=text]:focus,.custom-input input[type=password]:focus,.custom-input 
+input[type=email]:focus,.custom-input textarea:focus{
   border-bottom: 1px solid #c4d3fb !important;
   box-shadow: 0 0 0 0 #c4d3fb !important;
 }
@@ -69,8 +70,7 @@ body{
 .custom-submit:focus{
   background: #4675f2;
 }
-.register-submit
-{
+.register-submit {
   margin-top: -20px;
 }
 .problems-contact p{
@@ -80,15 +80,14 @@ body{
 .problems-contact a{
   color: #456fe1;
 }
-input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after{
+input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, 
+[type="radio"].with-gap:checked+label:after{
   border-width: 3px;
   border-color: #57adfd!important;
 }
 input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after{
   border: #57adfd!important;
 }
-
-
 @media only screen and (min-device-width: 300px) and (max-device-width: 600px){
   .background-holder{
     height: 30vh;
