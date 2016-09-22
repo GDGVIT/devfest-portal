@@ -45,7 +45,7 @@ body{
 .custom-input input{
   width: 80%;
 }
-.custom-input input[type=text],.custom-input input[type=password],.custom-input 
+.custom-input input[type=text],.custom-input input[type=password],.custom-input
 input[type=email],.custom-input textarea {
   font-size: 18px;
   border: 0.5px solid #c4d3fb;
@@ -55,7 +55,7 @@ input[type=email],.custom-input textarea {
   margin-bottom: 20px;
   height: 30px;
 }
-.custom-input input[type=text]:focus,.custom-input input[type=password]:focus,.custom-input 
+.custom-input input[type=text]:focus,.custom-input input[type=password]:focus,.custom-input
 input[type=email]:focus,.custom-input textarea:focus{
   border-bottom: 1px solid #c4d3fb !important;
   box-shadow: 0 0 0 0 #c4d3fb !important;
@@ -80,7 +80,7 @@ input[type=email]:focus,.custom-input textarea:focus{
 .problems-contact a{
   color: #456fe1;
 }
-input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, 
+input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before,
 [type="radio"].with-gap:checked+label:after{
   border-width: 3px;
   border-color: #57adfd!important;
@@ -98,6 +98,9 @@ input[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:a
   }
   .background-holder p{
     top: 5px;
+  }
+  .register-form-holder{
+    width: 70%;
   }
   .custom-submit{
     margin-top: 3%;
