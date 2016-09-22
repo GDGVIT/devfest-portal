@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<% function errBlock(errField,field,message){ %>
+    <% if(errField==field){ %>
+        <span class="red-text text-darken-4">
+            <%= message %>
+        </span>
+    <% } %>
+<% } %>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDG Devfest '16 | Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/register.css">
+    <meta name="theme-color" content="#232240">
+    <script src="js/jquery.min.js"></script>
+    <link rel="icon" href="images/gdg.png">
+  </head>
+  <body>
+    <div class="row background-holder">
+      <img src="images/registertext1.png">
+      <p>
+        Register to be a part of our awesome event.
+      </p>
+    </div>
+    <form action="/register" method="POST" id="register-form">
+      <div class="row register-form-holder">
+        <div class="register-form  z-depth-4">
+          <div class="instructions">
+            * marked fields are required
+          </div>
+
+          <% if(errMessage && errMessage.length>0) { %>
+            <div class="custom-input">
+              <span class="card-panel red darken-4" style="display: block;width: 80%;">
+                  <%= errMessage %>
+              </span>
+            </div>
+          <% } %>
+            <div class="custom-input">
+              <p>Full Name*</p>
+              <%= errBlock(errField,"name","Name can contain letters and spaces only.") %>
+              <input name="name" type="text" required value="<%= req.name %>">
+            </div>
+            <div class="custom-input">
+              <p>Registration Number*</p>
+              <%= errBlock(errField,"regNo","Invalid registration number.") %>
+              <input name="regNo" type="text" required value="<%= req.regNo %>">
+            </div>
+            <div class="custom-input">
+              <p>Phone Number*</p>
+              <%= errBlock(errField,"contact","Invalid phone number.") %>
+              <input name="contact" type="text" required value="<%= req.contact %>">
+            </div>
+            <div class="custom-input">
+              <p>Email Address*</p>
+              <%= errBlock(errField,"email","Invalid Email. Please enter a valid vit.ac.in email only.") %>
+              <input name="email" type="email" required value="<%= req.email %>">
+            </div>
+            <div class="custom-input">
+              <p>Password*</p>
+              <%= errBlock(errField,"password","Password should be of minimum 5 characters.") %>
+              <input name="password" type="password" required value="<%= req.password %>">
+            </div>
+            <div class="custom-input">
+              <p>Gender *</p>
+              <input name="gender" type="radio" id="male" class="with-gap" value="male" <%= req.gender=='male'?'checked':'' %>>
+              <label for="male">Male</label>
+              <input name="gender" type="radio" id="female" class="with-gap" value="female" <%= req.gender=='female'?'checked':'' %>>
+              <label for="female">Female</label>
+            </div>
+            <div class="custom-input">
+              <p>Block And Room*</p>
+              <%= errBlock(errField,"blockRoom","Invalid block and room.") %>
+              <input name="blockRoom" type="text" required value="<%= req.blockRoom %>">
+            </div>
+            <div class="custom-input">
+              <p>LinkedIn Profile</p>
+              <input name="linkedIn" type="text" value="<%= req.linkedIn %>">
+            </div>
+            <div class="custom-input">
+              <p>GitHub Profile</p>
+              <input name="github" type="text" value="<%= req.github %>">
+            </div>
+            <div class="custom-input">
+              <p>Behance Profile</p>
+              <input name="behance" type="text" value="<%= req.behance %>">
+            </div>
+            <br><br><br>
+      </div>
+      <div class="center register-submit">
+        <button class="custom-submit" type="submit">Submit</button>
+      <br>
+      <br>
+    </div>
+    </form>
+    <div class="row problems-contact">
+      <p>
+        Have a question? <a href="mailto:gdgvitvellore@gmail.com">gdgvitvellore@gmail.com</a>
+      </p>
+    </div>
+  </body>
+</html>

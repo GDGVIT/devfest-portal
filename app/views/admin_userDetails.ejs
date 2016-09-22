@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDG Devfest '16 | Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/register.css">
+    <meta name="theme-color" content="#232240">
+    <script src="/js/jquery.min.js"></script>
+    <link rel="icon" href="/images/gdg.png">
+  </head>
+  <body>
+    <div class="row background-holder">
+      <img src="/images/registertext1.png">
+      <p>
+        Admin &gt; User &gt; <%= u.name %>
+    </p>
+    </div>
+    <form id="register-form">
+      <div class="row register-form-holder">
+          <a href="/admin/users" class="waves-effect waves-light btn" style="width:100%">All users</a>
+        <div class="register-form  z-depth-4 row">
+            <table class="responsive-table col s8 offset-s2 bordered">
+
+                <tbody>
+                    <tr>
+                        <td>User name</td>
+                        <td><%= u.name %></td>
+                    </tr>
+                    <tr>
+                        <td>Registration No.</td>
+                        <td><%= u.regNo %></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><%= u.email %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>verified</td>
+                        <td><%= u.verified %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Verification email sent</td>
+                        <td><%= u.verificationEmailSent %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>verified at</td>
+                        <td><%= u.verifiedAt %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Date Registered</td>
+                        <td><%= u.dateRegistered %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td><%= u.contact %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Team</td>
+                        <td></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><%= u.gender %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>Block and Room</td>
+                        <td><%= u.blockRoom %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>skills</td>
+                        <td><%= u.skills.join(", ") %></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td>github</td>
+                        <td><%= u.github %></td>
+                    </tr>
+                    <tr>
+                        <td>linkedIn</td>
+                        <td><%= u.linkedIn %></td>
+                    </tr>
+                    <tr>
+                        <td>behance</td>
+                        <td><%= u.behance %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </form>
+    <div class="row problems-contact">
+      <p>
+        Have a question? <a href="mailto:gdgvitvellore@gmail.com">gdgvitvellore@gmail.com</a>
+      </p>
+    </div>
+  </body>
+</html>

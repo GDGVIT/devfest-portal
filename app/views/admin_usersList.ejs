@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<% function errBlock(errField,field,message){ %>
+    <% if(errField==field){ %>
+        <span class="red-text text-darken-4">
+            <%= message %>
+        </span>
+    <% } %>
+<% } %>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDG Devfest '16 | Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/register.css">
+    <meta name="theme-color" content="#232240">
+    <script src="/js/jquery.min.js"></script>
+    <link rel="icon" href="/images/gdg.png">
+  </head>
+  <body>
+    <div class="row background-holder">
+      <img src="/images/registertext1.png">
+      <p>
+        Admin &gt; Users
+    </p>
+    </div>
+    <form id="register-form">
+      <div class="row register-form-holder">
+        <div class="register-form  z-depth-4">
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>regNo</th>
+                        <th>email</th>
+                        <th>verified</th>
+                        <th>contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(function(u,index){ %>
+                        <tr>
+                            <td><%= index %></td>
+                            <td><%= u.name %></td>
+                            <td><%= u.regNo %></td>
+                            <td><%= u.email %></td>
+                            <td><%= u.verified?"verified":"" %></td>
+                            <td><%= u.contact %></td>
+                            <td><a class="waves-effect waves-light btn" href="/admin/user/<%- u.email %>">View</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </form>
+    <div class="row problems-contact">
+      <p>
+        Have a question? <a href="mailto:gdgvitvellore@gmail.com">gdgvitvellore@gmail.com</a>
+      </p>
+    </div>
+  </body>
+</html>

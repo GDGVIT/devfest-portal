@@ -1,0 +1,4 @@
+{
+    "ignore": ["views/*.ejs", "public/"] ,
+    "exec" : "node bin/www"
+}
