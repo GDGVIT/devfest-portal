@@ -1,6 +1,9 @@
 *{
   font-family: 'Montserrat', sans-serif;
 }
+body{
+  overflow: hidden;
+}
 .details{
   background: #3e3e3e;
   padding:2.5%;
@@ -94,6 +97,7 @@
 }
 .search-teams{
   padding:20px;
+  padding-bottom: 0px;
 }
 .search-teams input
 {
@@ -113,6 +117,7 @@
 .admin{
   font-size:130%;
   color:#1876f6;
+  margin-top: 5px;
 }
  #search{
   font-size: 90%;
@@ -122,7 +127,7 @@
   background: #e3eafd;
   color: rgba(0, 0, 0,0.8);
   margin-bottom: 20px;
-  border-radius:25px;
+  border-radius:0px;
   text-align:center;
   height:35px;
 }
@@ -150,7 +155,7 @@
   left: 35vw;
 }
 .create-team .border-bottom i{
-  left:43vw;
+  left:35vw;
 }
 .team-info{
   color: #1876f6;
@@ -196,12 +201,12 @@
   padding:20px;
 background:#f4f3f3;
 }
-#teamModal{
+#teamModal, #teamModalBig{
   width:35%;
   background:#3e3e3e;
   color:rgba(255,255,255,0.3)
 }
-#teamModal .modal-content{
+#teamModal .modal-content, #teamModalBig .modal-content{
   padding-left:0;
   padding-right:0;
   padding-top:3%;
@@ -237,6 +242,34 @@ background:#f4f3f3;
   color:#9e7d35;
   font-size:80%;
 }
+.search-member-results{
+  height: 500px;
+  overflow-y: scroll;
+  margin-top: -42px;
+}
+.search-member-results .result{
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 3%;
+  overflow-x: hidden;
+}
+.search-member-results i{
+  color: #4CAF50!important;
+}
+.search-member-results::-webkit-scrollbar{
+  width: 10px;
+}
+.details input[type=text],.details input[type=email],.details input[type=text]:focus,.details input[type=email]:focus{
+  border-bottom: 0px solid rgba(0,0,0,0.5)!important;
+  outline:  0 !important;
+  box-shadow: 0 !important;
+  margin-bottom:0;
+}
+.details .border-bottom{
+  padding:0;
+}
+input[disabled=disabled]{
+  color: rgba(255,255,255,0.7)!important;
+}
 @media(max-width:600px){
   .personal-info{
     margin-top:20px;
@@ -246,7 +279,7 @@ background:#f4f3f3;
   .create-join{
     margin-top:20%;
   }
-  #teamModal{
+  #teamModal, #teamModalBig{
     width:90%;
   }
   #edit{
