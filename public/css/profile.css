@@ -76,7 +76,7 @@
 #create-team{
   cursor:pointer;
 }
-.create-team .personal-info{
+.create-team .personal-info, .join-team .personal-info{
   background:#1876f6;
   color:rgba(255,255,255,0.9);
   padding-bottom:5.5%;
@@ -133,6 +133,50 @@
 .tabs .indicator{
   background-color:#1876f6 !important;
 }
+
+.join-team form{
+  padding: 10%;
+}
+.join-team #search, .join-team #search::-webkit-input-placeholder{
+  color: #1876f6;
+}
+.join-team .border-bottom i{
+  display: inline;
+  position: relative;
+  top: -50px;
+  left: 35vw;
+}
+.team-info{
+  color: #1876f6;
+}
+.team-info-header{
+  padding-top: 10px;
+  font-size: 1.5rem;
+}
+.team-info-header div{
+  border-bottom: 1px solid #add0ff;
+  padding-bottom: 10px!important;
+}
+.team-info-header .badge{
+  margin-top: 1.1vh;
+  float: right;
+  width: 50%;
+  font-size: 1rem;
+  padding-bottom: 0px !important;
+  color: #1876f6;
+  border: 2px solid #1876f6;
+}
+.team-info small{
+  color: #898989;
+}
+.team-details{
+  padding: 2%;
+}
+.team-details .member{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #add0ff;
+}
 @media(max-width:600px){
   .personal-info{
     margin-top:20px;
@@ -149,5 +193,36 @@
   }
   .create-team #edit{
     margin-top:5% !important;
+  }
+  .join-team .personal-info{
+    height: 50px;
+  }
+  .join-team .border-bottom i{
+    left: 70vw;
+  }
+  .team-info-header{
+    font-size: 1rem;
+  }
+  .team-info-header .badge{
+    font-size: 0.8rem;
+    margin-top: 1px;
+  }
+  .team-info .member h5{
+    font-size: 20px;
+  }
+}
+@media only screen and (min-device-width: 760px) and (max-device-width: 1023px){
+  .team-info-header .badge{
+    margin-top: 6.6vh;
+  }
+}
+@media only screen and (min-device-width: 1440px) and (max-device-width: 1600px){
+  .team-info-header .badge{
+    margin-top: 0.6vh;
+  }
+}
+@media only screen and (min-device-width: 1920px) and (max-device-width: 2000px){
+  .team-info-header .badge{
+    margin-top: 0.7vh;
   }
 }
