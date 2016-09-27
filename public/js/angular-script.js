@@ -1,10 +1,11 @@
 var app = angular.module('app',['controllers']);
 var controllers = angular.module('controllers',[]);
 controllers.controller('mainController',function($scope){
-  $scope.create = false;
+  $scope.create = true;
   $scope.join = false;
   $scope.info = false;
-  $scope.team = true;
+  $scope.team = false;
+  $scope.after = false;
   $scope.member1 = "";
   $scope.member2 = "";
   $scope.searchMember = '';
@@ -27,3 +28,22 @@ controllers.controller('mainController',function($scope){
     }
   }
 });
+/*
+app.config(['$routeProvider', function($routeProvider) {
+            $routeProvider.
+
+            when('/join', {
+               templateUrl: 'join.html',
+               controller: 'mainController'
+            }).
+
+            when('/bye', {
+               templateUrl: 'bye.html',
+               controller: 'mainController'
+            }).
+
+            otherwise({
+               redirectTo: '/hello'
+            });
+         }]);
+*/

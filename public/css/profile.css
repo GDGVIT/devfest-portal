@@ -201,12 +201,12 @@ body{
   padding:20px;
 background:#f4f3f3;
 }
-#teamModal, #teamModalBig{
+#teamModal, #teamModalBig, #teamModalAfter,#teamModalAfterBig{
   width:35%;
   background:#3e3e3e;
   color:rgba(255,255,255,0.3)
 }
-#teamModal .modal-content, #teamModalBig .modal-content{
+#teamModal .modal-content, #teamModalBig .modal-content,#teamModalAfter .modal-content,#teamModalAfterBig .modal-content{
   padding-left:0;
   padding-right:0;
   padding-top:3%;
@@ -270,6 +270,34 @@ background:#f4f3f3;
 input[disabled=disabled]{
   color: rgba(255,255,255,0.7)!important;
 }
+.after-create-name{
+  font-size: 140%;
+}
+.after-create-name a{
+  font-size: 80%;
+}
+.after-create-table,.after-create-table tr,.after-create-table td{
+  border: 1px solid rgba(0,0,0,0.4);
+}
+.after-create-table td{
+  padding-left: 20px;
+}
+.custom-submit{
+  background: transparent;
+  border:2px solid #1876F6;
+  outline: none;
+  padding: 5px 20px;
+  color:rgba(255,255,255,0.6);
+}
+.details .center{
+  color: rgba(255,255,255,0.6);
+}
+.details .center .custom-submit{
+  margin-top: 10px;
+}
+.join-team .fa-times{
+  color: white!important;
+}
 @media(max-width:600px){
   .personal-info{
     margin-top:20px;
@@ -279,7 +307,7 @@ input[disabled=disabled]{
   .create-join{
     margin-top:20%;
   }
-  #teamModal, #teamModalBig{
+  #teamModal, #teamModalAfter{
     width:90%;
   }
   #edit{
@@ -308,6 +336,9 @@ input[disabled=disabled]{
   .team-info-header .badge{
     font-size: 0.8rem;
     margin-top: 1px;
+  }
+  .after-create-table td{
+    padding-left: 5px;
   }
 }
 @media only screen and (min-device-width: 760px) and (max-device-width: 1023px){
