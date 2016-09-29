@@ -1028,6 +1028,10 @@ nav{
   background: -moz-linear-gradient(#babcbe, #ffffff); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#babcbe, #ffffff); /* Standard syntax */
 }
+
+.faq p{
+  background: white;
+}
 @media(max-width: 768px){
   .date{
     padding-left: 0px !important;
