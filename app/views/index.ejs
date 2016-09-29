@@ -93,6 +93,41 @@
 <div class="cutter">
   <img src="images/Cutter.png">
 </div>
+<div class="faq row">
+  <h1 class="heading center">FAQ</h1>
+  <div class="col m8 l8 s8 push-m2 push-l2 push-s2">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">What is a hackathon?</div>
+        <div class="collapsible-body"><p>A hackathon is an intense session that brings together computer programmers, designers, and specialists to build a product within a stipulated period of time.</p></div>
+      </li>
+      <li>
+        <div class="collapsible-header">Who should attend?</div>
+        <div class="collapsible-body"><p>Anybody who has a knack for solving problems, likes to code, design and develop unique ideas and models are welcome to participate at the hackathon.</p></div>
+      </li>
+      <li>
+        <div class="collapsible-header">What is the maximum team size?</div>
+        <div class="collapsible-body"><p>A maximum of 3 members per team will be taken on a first come first serve basis. A total of 60 teams will be admitted to the hackathon.</p></div>
+      </li>
+      <li>
+        <div class="collapsible-header">What is the judging criteria?</div>
+        <div class="collapsible-body"><p>The complete end product that has been developed over the period of the hackathon is judged to see whether any new innovative idea has been brought to the table. The design and implementation of the code are also taken into account. The presentation of the product is also an important factor.</p></div>
+      </li>
+      <li>
+        <div class="collapsible-header">What should I bring?</div>
+        <div class="collapsible-body"><p>All the participants are required to bring their laptops and any material that the team requires to use during the hackathon. No material for the hack will be provided.</p></div>
+      </li>
+      <li>
+        <div class="collapsible-header">How do I form a team?</div>
+        <div class="collapsible-body"><p>If you do not already have a team you can come to the event and we will assign you to a team to participate for the hackathon.</p></div>
+      </li>
+      <li>
+        <div class="collapsible-header">Will there be provision for food?</div>
+        <div class="collapsible-body"><p>Yes, dinner that includes pizzas from dominos will be provided free of cost. The breakfast and lunch on 16th will not be provided till further notice.</p></div>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="past-events">
 <div class="past-events-header row">
     <h1 class="center heading">What went down in 2015?</h1>
@@ -227,6 +262,9 @@
     <% if(message && message.length>0) { %>
         Materialize.toast(<%- JSON.stringify(message) %>, 10000)
     <% } %>
+    $('.collapsible').collapsible({
+       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+     });
   });
 
   function astroDown(){

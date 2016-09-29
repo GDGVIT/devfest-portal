@@ -985,6 +985,9 @@ nav{
 .custom-padding{
     padding-left: 30px !important;
 }
+.faq p{
+  background: white;
+}
 @media(max-width:600px)
 {
   .custom-padding{
