@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDG Devfest '16</title>
+    <!--    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300i,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <meta name="theme-color" content="#232240">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-script.js"></script>
+    <link rel="icon" href="images/gdg.png">
+</head>
+<body ng-app="app">
+<div class="container-fluid" ng-controller="mainController">
+    <div class="row no-margin">
+        <div class="col s12 m6 l6 no-padding no-margin hide-on-small-only" style="background:#3e3e3e;">
+            <div class="row no-margin border-bottom">
+                <div class="col m1 l1 no-padding no-margin">
+                    <div class="menu-icon">
+                        <img src="images/menu.png">
+                    </div>
+                </div>
+                <div class="col m9 l9 no-padding no-margin">
+                    <div class="personal-info">
+                        Personal Information
+                    </div>
+                </div>
+                <div class="col m1 l1 no-padding no-margin">
+                    <div class="badge" id="edit" ng-click="edit=!edit">
+                        Edit
+                    </div>
+                </div>
+            </div>
+            <div class="col m1 l1 no-padding no-margin selectors-holder">
+                <div class="selectors">
+                    <div class="row">
+                        <div class="selector">
+                            <img src="images/man.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m11 l11 no-padding no-margin">
+                <div class="details">
+                    <form name="details" action="" method="POST">
+                        <div class="detail border-bottom">
+                            <small>Name</small>
+                            <br>
+                            <input ng-disabled="edit" type="text" class="profile-input" value="Ankur Sarode">
+                        </div>
+                        <div class="detail border-bottom">
+                            <small>Registration Number</small>
+                            <br>
+                            <input type="text" ng-disabled="edit" class="profile-input" value="15BCE0001">
+                        </div>
+                        <div class="detail border-bottom">
+                            <small>Email Address</small>
+                            <br>
+                            <input type="email" ng-disabled="edit" class="profile-input" value="asd@gmail.com">
+                        </div>
+                        <div class="detail border-bottom">
+                            <small>Contact</small>
+                            <br>
+                            <input type="text" ng-disabled="edit" class="profile-input" value="9999999999">
+                        </div>
+                        <br><br>
+                        <div class="center" ng-hide="edit">
+                            You can edit your details now<br>
+                            <button class="custom-submit" type="submit">Modify</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l6 no-padding no-margin">
+            <div class="team">
+                <div class="team-main" ng-show="team">
+                    <div class="blue-bar">Hi John</div>
+                    <div class="notification">
+                        Sundar Pichai wants you to join <a class="modal-trigger" href="#teamModalBig">Google</a> team
+                        for the mission
+                    </div>
+
+                    <!-- Modal Structure -->
+                    <div id="teamModalBig" class="modal">
+                        <div class="modal-content">
+                            <div class="row no-margin border-bottom">
+                                <div class="modal-head">
+                                    <small>Team Details</small>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-team-name border-bottom">
+                                    GOOGLE
+                                </div>
+                                <div class="modal-team-mem border-bottom">
+                                    <div class="row no-margin">
+                                        <div class="col m8 l8">
+                                            <span>Rajat Mukati</span><br>
+                                            <small>rajatmukati005@gmail.com</small>
+                                        </div>
+                                        <div class="col m4 l4">
+                                            <div class="modal-team-mem-status">
+                                                15BCE0785<br>
+                                                <small>pending</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-team-mem border-bottom">
+                                    <div class="row no-margin">
+                                        <div class="col m8 l8">
+                                            <span>Rajat Mukati</span><br>
+                                            <small>rajatmukati005@gmail.com</small>
+                                        </div>
+                                        <div class="col m4 l4">
+                                            <div class="modal-team-mem-status">
+                                                15BCE0785<br>
+                                                <small>pending</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="create-join center">
+                        <img src="images/addTeam.png" id="addTeamImg">
+                        <br><br>
+                        <div class="add-team-desc">
+                            <div class="col m10 l10 push-m1 push-l1">
+                                Your space seems to be empty. Before embarking on this mission we recommend you to <a
+                                        id="join-team" ng-click="join=!join;">join a team</a> or <a id="create-team">create
+                                    a team</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="create-team" ng-show="create">
+                    <div class="row no-margin border-bottom">
+                        <div class="col m12 l12 no-padding no-margin">
+                            <div class="personal-info">
+                                <div class="col m6 l6">
+                                    Create Team
+                                </div>
+                                <div class="col m1 l1 push-m4 push-l4 no-padding no-margin">
+                                    <div class="badge" id="edit">
+                                        Create
+                                    </div>
+                                </div>
+                                <div class="col m1 l1 push-m4 push-l4 no-padding no-margin">
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-times "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-padding no-margin">
+                        <form action="" method="POST">
+                            <div class="search-teams">
+                                <div class="border-bottom">
+                                    <small>Team Name</small>
+                                    <br>
+                                    <input type="text" placeholder="Set Team Name">
+                                </div>
+                                <div class="border-bottom">
+                                    <small>Team Members</small>
+                                    <br><span class="admin">Selena Gomez(admin)</span><br>
+                                    <span ng-show="(member1!=='')" class="admin">{{member1}} <section
+                                                style="text-decoration: underline;display: inline;cursor: pointer;color: red"
+                                                ng-click="removeMember(member1)"><small>(remove)</small></section><br></span>
+                                    <span ng-show="(member2!=='')" class="admin">{{member2}} <section
+                                                style="text-decoration: underline;display: inline;cursor: pointer;color: red"
+                                                ng-click="removeMember(member2)"><small>(remove)</small></section><br></span><br>
+
+                                    <div class="col m10 l10 push-l1 push-m1 no-padding">
+                                        <input id="search" ng-model="searchMember" type="text"
+                                               placeholder="Search and add member">
+                                        <i class="fa fa-search" style="color: #1876f6"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col m10 l10 push-l1 push-m1" style="margin-left: 5px">
+                            <div class="search-member-results" ng-show="searchMember != ''">
+                                <div ng-repeat="person in data | filter:searchMember">
+                                    <div class="result">
+                                        {{person.name}}
+                                        <i class="fa fa-plus right" ng-click="saveMember(person.name, person.address)"
+                                           style="color: lightgreen;"></i>
+                                        <br>
+                                        <small><a href="{{person.address}}" target="_blank">{{person.address}}</a>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="join-team" ng-show="join">
+                    <div class="row no-padding no-margin">
+                        <div class="col m12 l12 no-padding no-margin">
+                            <div class="personal-info">
+                                <div class="col m6 l6">
+                                    Join Team
+                                </div>
+                                <div class="col m1 l1 push-m5 push-l5 no-padding no-margin">
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-times "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-margin no-padding">
+                        <form action="" method="POST">
+                            <div class="border-bottom">
+                                <input id="search" type="text" placeholder="Search Teams">
+                                <i class="fa fa-search" style="color: #1876f6"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="team-info" ng-show="info">
+                    <div class="row no-padding no-margin">
+                        <div class="team-info-header">
+                            <div class="col m8 l8">
+                                Google Developers VIT
+                            </div>
+                            <div class="col m4 l4">
+                                <div class="badge">
+                                    Leave
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-details">
+                            <br><br><br>
+                            <div class="member">
+                                <small>Member (Admin)</small>
+                                <h5>Selena Gomez (15BCE0538)</h5>
+                            </div>
+                            <div class="member">
+                                <small>Member</small>
+                                <h5>Rajat Mukati (15BCE0538)</h5>
+                            </div>
+                            <div class="member">
+                                <small>Member</small>
+                                <h5>Vishwajeetsinh Jadeja (15BCE0538)</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="after-create" ng-show="after">
+                    <div class="blue-bar">Hi John</div>
+                    <div class="notification">
+                        Sundar Pichai wants you to join <a class="modal-trigger" href="#teamModalAfterBig">Google</a>
+                        team for the mission
+                    </div>
+                    <!-- Modal Structure -->
+                    <div id="teamModalAfterBig" class="modal">
+                        <div class="modal-content">
+                            <div class="row no-margin border-bottom">
+                                <div class="modal-head">
+                                    <small>Team Details</small>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-team-name border-bottom">
+                                    GOOGLE
+                                </div>
+                                <div class="modal-team-mem border-bottom">
+                                    <div class="row no-margin">
+                                        <div class="col m8 l8">
+                                            <span>Rajat Mukati</span><br>
+                                            <small>rajatmukati005@gmail.com</small>
+                                        </div>
+                                        <div class="col m4 l4">
+                                            <div class="modal-team-mem-status">
+                                                15BCE0785<br>
+                                                <small>pending</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-team-mem border-bottom">
+                                    <div class="row no-margin">
+                                        <div class="col m8 l8">
+                                            <span>Rajat Mukati</span><br>
+                                            <small>rajatmukati005@gmail.com</small>
+                                        </div>
+                                        <div class="col m4 l4">
+                                            <div class="modal-team-mem-status">
+                                                15BCE0785<br>
+                                                <small>pending</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col m10 l10 push-l1 push-m1">
+                        <br><br>
+                        <br><br>
+                        <div class="after-create-name">
+                            Team Ka Naam&nbsp&nbsp<a href="">
+                                <small>(leave team)</small>
+                            </a>
+                        </div>
+                        <br>
+                        <div class="after-create-table-holder">
+                            <table class="after-create-table responsive-table">
+                                <tr>
+                                    <th>
+                                        Team Name
+                                    </th>
+                                    <th>
+                                        Position
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Vishwajeet Jadeja
+                                    </td>
+                                    <td>
+                                        Admin
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Ankur Sarode
+                                        Ankur Sarode
+                                    </td>
+                                    <td>
+                                        Member
+                                    </td>
+                                    <td>
+                                        <a href="">remove</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Selena Gommez
+                                    </td>
+                                    <td>
+                                        Member
+                                    </td>
+                                    <td>
+                                        <a href="">remove</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('ul.tabs').tabs();
+        $('.modal-trigger').leanModal();
+    });
+</script>
+</html>

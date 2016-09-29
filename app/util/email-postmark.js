@@ -1,31 +1,29 @@
 var nodemailer = require('nodemailer');
-var sgTransport = require('nodemailer-sendgrid-transport');
+var postmarkTransport = require('nodemailer-postmark-transport');
 var config = require("../../config");
+var fs = require("fs");
 
 var jwt = require("jsonwebtoken");
-var fs = require("fs")
 
 var emailFormat = fs.readFileSync(__dirname+"/emailFormat.txt","utf8");
-console.log("Email format loaded");
 
 var signingKey = config.signingKey;
 
 var options = {
     auth: {
-        api_user: config.sendgrid.username,
-        api_key:  config.sendgrid.password
+        apiKey:  config.postmark.apiKey
     }
 }
 
-var mailer = nodemailer.createTransport(sgTransport(options));
+var mailer = nodemailer.createTransport(postmarkTransport(options));
 
 
 module.exports.sendMail = function(user,callback){
-console.log("signing");
     jwt.sign({
         email : user.email,
         regNo : user.regNo,
-        userId : user._id.toString()
+        userId : user._id.toString(),
+        sentAt : new Date().getTime
     }, signingKey, { algorithm: "HS256" }, function(err, token) {
         if(err)return callback(err);
         var link = config.verificationLink + token;
@@ -34,8 +32,8 @@ console.log("signing");
         console.log("Link generated");
         var email = {
             to: [user.email],
-            from: "noreply@gdgvitvellore.com",
-            subject: "Email Confirmation",
+            from: "devfest@gdgvitvellore.com",
+            subject: "Verify your GDG Devfest'16",
             text: "Verify your GDG Devfest'16",
             html: html
         };

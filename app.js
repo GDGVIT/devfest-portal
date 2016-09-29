@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var flash = require("express-flash");
 var config = require("./config");
 
+global.config = config;
+
 var mongoose = require("mongoose");
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
@@ -47,6 +49,9 @@ injector.initDAO(["userDAO"]);
 injector.injectRoute(app,"/","index");
 injector.injectRoute(app,"/","auth");
 injector.injectRoute(app,"/admin","admin");
+injector.injectRoute(app,"/profile","user");
+injector.injectRoute(app,"/team","team");
+
 
 //PASSPORT
 var User = require('./app/models/user');

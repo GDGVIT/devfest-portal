@@ -1,0 +1,76 @@
+
+<div class="team-main">
+    <div class="blue-bar">Hi John</div>
+    <% invitations.forEach(function(team){ %>
+        <div class="notification">
+            <%= team.admin.name %> invited you to join his team - <%= team.name %>.
+            <a class="waves-effect waves-teal btn-flat" href="joinTeam?teamId=<%- team._id.toString() %>">Accept</a>
+
+            <a class="waves-effect waves-red btn-flat">Reject</a>
+        </div>
+    <% }) %>
+    <br><br>
+    <div class="center">
+        Create your own team<br>
+        <a class="waves-effect waves-purple btn-flat" href="#/create">Create Team</a>
+    </div>
+
+    <!-- Modal Structure -->
+
+    <div id="teamModalBig" class="modal">
+        <div class="modal-content">
+            <div class="row no-margin border-bottom">
+                <div class="modal-head">
+                    <small>Team Details</small>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-team-name border-bottom">
+                    GOOGLE
+                </div>
+                <div class="modal-team-mem border-bottom">
+                    <div class="row no-margin">
+                        <div class="col m8 l8">
+                            <span>Rajat Mukati</span><br>
+                            <small>rajatmukati005@gmail.com</small>
+                        </div>
+                        <div class="col m4 l4">
+                            <div class="modal-team-mem-status">
+                                15BCE0785<br>
+                                <small>pending</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-team-mem border-bottom">
+                    <div class="row no-margin">
+                        <div class="col m8 l8">
+                            <span>Rajat Mukati</span><br>
+                            <small>rajatmukati005@gmail.com</small>
+                        </div>
+                        <div class="col m4 l4">
+                            <div class="modal-team-mem-status">
+                                15BCE0785<br>
+                                <small>pending</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="create-join center">
+        <img src="images/addTeam.png" id="addTeamImg">
+        <br><br>
+        <div class="add-team-desc">
+            <div class="col m10 l10 push-m1 push-l1">
+                Your space seems to be empty. Before embarking on this mission we recommend you to <a
+                        id="join-team" ng-click="join=!join;">join a team</a> or <a id="create-team">create
+                    a team</a>
+            </div>
+        </div>
+    </div>
+</div>

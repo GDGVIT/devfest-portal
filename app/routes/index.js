@@ -5,8 +5,7 @@ var router = express.Router();
 
 module.exports.router = router;
 module.exports.init = function(inject){
-    router.get("/",function(req,res){
-        console.log(res.locals.message);
+    router.get("/",function (req, res, next) {
         res.render("index");
     });
 }

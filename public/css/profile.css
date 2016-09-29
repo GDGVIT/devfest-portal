@@ -298,6 +298,16 @@ input[disabled=disabled]{
 .join-team .fa-times{
   color: white!important;
 }
+
+.custom-button , .custom-button:focus {
+  background: transparent;
+  border:2px solid #1876F6;
+  outline: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  margin: 20px;
+}
+
 @media(max-width:600px){
   .personal-info{
     margin-top:20px;
@@ -340,6 +350,10 @@ input[disabled=disabled]{
   .after-create-table td{
     padding-left: 5px;
   }
+}
+
+.selector{
+  border-bottom: 1px solid grey;
 }
 @media only screen and (min-device-width: 760px) and (max-device-width: 1023px){
   .team-info-header .badge{

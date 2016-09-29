@@ -1,0 +1,50 @@
+<div class="team-info">
+    <div class="row no-padding no-margin">
+        <div class="team-info-header">
+            <div class="row">
+
+                <span class="col m8 l8">
+                    {{team.name}}
+                </span>
+                <span class="col m4 l4">
+                    <% if(isTeamAdmin){ %>
+                        <a href="" ng-click="deleteTeam()" class="badge">
+                            Delete
+                        </a>
+                    <% }else{ %>
+                        <a href="" ng-click="leaveTeam()" class="badge">
+                            Leave
+                        </a>
+                    <% } %>
+                </span>
+            </div>
+        </div>
+
+        <div class="team-details">
+            <br><br><br>
+            <table class="table">
+                <tr>
+                    <th>Member Name</th>
+                    <th>Position</th>
+                    <th>Status</th>
+                </tr>
+                <tr ng-repeat="member in team.members">
+                    <td>{{member.user.name}}</td>
+                    <td>{{member.status=="admin"?"Admin":"Member"}}</td>
+                    <td>{{member.status}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="col m10 l10 push-l1 push-m1 no-padding">
+            <input id="search" ng-model="searchMember" type="text"
+                   placeholder="Search and add member">
+            <i class="fa fa-search" style="color: #1876f6"></i>
+        </div>
+    </div>
+</div>
+
+<script>
+    var team = <%- JSON.stringify(team) %>;
+</script>

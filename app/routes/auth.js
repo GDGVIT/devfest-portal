@@ -1,7 +1,7 @@
 var express = require("express");
 var passport = require('passport');
 var User = require("../models/user");
-var email = require("../util/email");
+var email = require("../util/email-smtp");
 var router = express.Router();
 
 module.exports.router = router;
@@ -24,7 +24,7 @@ module.exports.init = function(inject){
             if(!obj.email || !obj.regNo || !obj.userId || !obj.iat)return res.send("Invalid key detected");
             if((new Date()).getTime() - obj.iat*1000 > 24*60*60*1000){
                 req.flash("message","Failed to verify email. Token expired. Please register again.");
-                return res.redirect("/");
+                return res.redirect('/');
             }
             User.findOne({_id:obj.userId},function(err,user){
                 if(err || !user){
@@ -155,4 +155,18 @@ module.exports.init = function(inject){
             }
         });
     });
+
+    router.get("/login",function(req,res){
+        res.render("login");
+    });
+
+    router.post('/login', passport.authenticate('local'), function(req, res) {
+        res.redirect('/profile');
+    });
+
+    router.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/');
+    });
+
 }

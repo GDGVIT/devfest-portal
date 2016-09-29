@@ -26,8 +26,25 @@ $.autoLogin = function(req,res,next){
     if(req.isAuthenticated()){
             next();
     }else{
-        req.body.username = "mdakram28";
-        req.body.password = "1234";
+        req.body.username = "mohdakram.ansari2015@vit.ac.in";
+        req.body.password = "12345";
         passport.authenticate("local")(req,res,next);
+    }
+}
+
+$.isLoggedIn = function (req, res, next) {
+    if(req.isAuthenticated()){
+        next();
+    }else{
+        return res.redirect("/login");
+    }
+}
+
+$.isVerified = function (req, res, next) {
+    if(req.user.verified){
+        next();
+    }else{
+        req.flash("errMessage","Email not verified");
+        return res.redirect("/login");
     }
 }

@@ -25,6 +25,8 @@
     "nodemailer" : "latest",
     "nodemailer-sendgrid-transport" : "latest",
     "jsonwebtoken" : "latest",
-    "basic-auth" : "latest"
+    "basic-auth" : "latest",
+    "nodemailer-postmark-transport" : "latest",
+    "nodemailer-smtp-transport" : "latest"
   }
 }

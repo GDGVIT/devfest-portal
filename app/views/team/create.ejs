@@ -1,0 +1,55 @@
+<div class="create-team" ng-controller="createController">
+    <div class="row no-margin border-bottom">
+        <div class="col m12 l12 no-padding no-margin">
+            <div class="personal-info">
+                <div class="col m6 l6">
+                    Create Team
+                </div>
+                <div class="col m1 l1 push-m4 push-l4 no-padding no-margin">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-times "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row no-padding no-margin">
+            <div class="search-teams">
+                <div class="border-bottom">
+                    <small>Team Name</small>
+                    <br>
+                    <input ng-disabled="requesting" type="text" placeholder="Set Team Name" ng-model="teamName">
+                </div>
+                <div class="border-bottom">
+                    <small>Team Members</small>
+                    <br><span class="admin"><%= user.name %> (admin)</span><br>
+                    <!--<div class="col m10 l10 push-l1 push-m1 no-padding">
+                        <input id="search" ng-model="searchMember" type="text"
+                               placeholder="Search and add member">
+                        <i class="fa fa-search" style="color: #1876f6"></i>
+                    </div>-->
+                </div>
+            </div>
+            <div class="center">
+                <button type="submit" class="waves-effect waves-teal custom-button" ng-click="createTeam()" ng-disabled="requesting">Create</button>
+            </div>
+        <!--<div class="col m10 l10 push-l1 push-m1" style="margin-left: 5px">
+            <div class="search-member-results" ng-show="searchMember != ''">
+                <div ng-repeat="person in data | filter:searchMember">
+                    <div class="result">
+                        {{person.name}}
+                        <i class="fa fa-plus right" ng-click="saveMember(person.name, person.address)"
+                           style="color: lightgreen;"></i>
+                        <br>
+                        <small><a href="{{person.address}}" target="_blank">{{person.address}}</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>
+
+<script>
+    var user = {
+        name : <%- JSON.stringify(user.name) %>
+    }
+</script>
