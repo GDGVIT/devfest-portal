@@ -81,7 +81,7 @@ module.exports.init = function(inject){
                 errField : "regNo"
             });
         }
-        if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i.test(req.email) || !req.email.endsWith("@vit.ac.in")){
+        if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i.test(req.email) || (!req.email.endsWith("@vitstudent.ac.in") && !req.email.endsWith("@vit.ac.in"))){
             return res.render("register",{
                 errField : "email"
             });
