@@ -690,7 +690,7 @@ body{
     background: -moz-linear-gradient(#cfd0d0, #ffffff); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#cfd0d0, #ffffff); /* Standard syntax */
     margin: 0 !important;position;
-    height:100vh !important;
+    
 }
 
 
@@ -940,7 +940,7 @@ nav{
     }
 }
 .date{
-    font-size: 58px; color:#0f1a30; font-weight: 700; top: 0;
+    font-size:350%; color:#0f1a30; font-weight: 700; top: 0;
 }
 
 .month-and-date{
@@ -1035,9 +1035,13 @@ nav{
 .faq p{
   background: white;
 }
-@media(max-width: 768px){
+@media(max-width: 1200px){
   .date{
     padding-left: 0px !important;
+    font-size: 320%;
+  }
+  .month,.year{
+    font-size: 100% !important;
   }
 }
 @media(max-width: 600px){
