@@ -17,6 +17,10 @@ module.exports.init = function (inject) {
     router.use(inter.isLoggedIn);
     router.use(inter.isVerified);
 
+    router.get("/",function(req,res){
+        res.render("profile");
+    });
+
     router.post("/saveProfile",function(req,res){
         console.log(req.body);
         req.name = req.body.name ? req.body.name.toString() : "";
