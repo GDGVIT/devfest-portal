@@ -27,11 +27,15 @@
                     <th>Member Name</th>
                     <th>Position</th>
                     <th>Status</th>
+                    <th ng-if="isTeamAdmin"></th>
                 </tr>
                 <tr ng-repeat="member in team.members">
                     <td>{{member.user.name}}</td>
                     <td>{{member.status=="admin"?"Admin":"Member"}}</td>
                     <td>{{member.status}}</td>
+                    <td ng-if="isTeamAdmin && member.status!='admin'">
+                        <a href="" ng-click="removeMember(member.user)" class="button">Remove</a>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -40,11 +44,82 @@
         <div class="col m10 l10 push-l1 push-m1 no-padding">
             <input id="search" ng-model="searchMember" type="text"
                    placeholder="Search and add member">
-            <i class="fa fa-search" style="color: #1876f6"></i>
+        </div>
+        <table class="table" ng-hide="searchMember==''">
+            <tr>
+                <th>Name
+                </th>
+                <th>RegNo
+                </th>
+                <th>Email
+                </th>
+                <th>Action
+                </th>
+            </tr>
+            <tr ng-repeat="user in users  | filter: searchMember | invitationFilter | limitTo: 5">
+                <td>{{user.name}}
+                </td>
+                <td>{{user.regNo}}
+                </td>
+                <td>{{user.email}}
+                </td>
+                <td>
+                    <a href="" ng-click="invite(user)" class="new badge blue">
+                        Invite
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="teamModalBig" class="modal">
+        <div class="modal-content">
+            <div class="row no-margin border-bottom">
+                <div class="modal-head">
+                    <small>Team Details</small>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-team-name border-bottom">
+                    SUBMIT PROJECT DETAILS
+                </div>
+                <div class="modal-team-mem border-bottom">
+                    <div class="row no-margin">
+                        <div class="col m8 l8">
+                            <span>Rajat Mukati</span><br>
+                            <small>rajatmukati005@gmail.com</small>
+                        </div>
+                        <div class="col m4 l4">
+                            <div class="modal-team-mem-status">
+                                15BCE0785<br>
+                                <small>pending</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-team-mem border-bottom">
+                    <div class="row no-margin">
+                        <div class="col m8 l8">
+                            <span>Rajat Mukati</span><br>
+                            <small>rajatmukati005@gmail.com</small>
+                        </div>
+                        <div class="col m4 l4">
+                            <div class="modal-team-mem-status">
+                                15BCE0785<br>
+                                <small>pending</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
 
 <script>
     var team = <%- JSON.stringify(team) %>;
+    var users = <%- JSON.stringify(users) %>;
+    var currentUser = <%- JSON.stringify(user) %>;
+    var isTeamAdmin = <%- JSON.stringify(isTeamAdmin) %>
 </script>

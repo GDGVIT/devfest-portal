@@ -643,12 +643,10 @@ body{
   transition: 4s all;
 }
 .register-button{
-    position: absolute;
-    bottom:35%;
-    left: 0; right: 0;
     margin: auto;
     z-index: 1;
     color: white;
+    display: inline;
 }
 .Devfest{
   position: absolute;
@@ -690,7 +688,7 @@ body{
     background: -moz-linear-gradient(#cfd0d0, #ffffff); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#cfd0d0, #ffffff); /* Standard syntax */
     margin: 0 !important;position;
-    
+
 }
 
 

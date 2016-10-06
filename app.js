@@ -59,7 +59,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect("mongodb://127.0.0.1/devfest16");
+mongoose.connect(config.db);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

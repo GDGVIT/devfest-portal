@@ -57,7 +57,7 @@ module.exports.init = function(inject){
         req.gender = req.body.gender ? req.body.gender.toString().toLowerCase() : "";
         req.skills = req.body.skills ? req.body.skills.toString().split(",") : [];
         req.skills.forEach(function(skill,i){
-            skills[i] = skill.toUpperCase().trim();
+            req.skills[i] = skill.toUpperCase().trim();
         });
         req.blockRoom = req.body.blockRoom ? req.body.blockRoom.toString() :"";
         req.github = req.body.github ? req.body.github.toString() : "";
@@ -160,7 +160,15 @@ module.exports.init = function(inject){
         res.render("login");
     });
 
-    router.post('/login', passport.authenticate('local'), function(req, res) {
+    router.post('/login',function(req,res,next){
+        console.log(req.body);
+
+        next();
+    }, passport.authenticate('local',{
+        failureRedirect: '/login',
+        failureFlash: 'true'
+    }), function(req, res) {
+        console.log("Logged in");
         res.redirect('/profile');
     });
 

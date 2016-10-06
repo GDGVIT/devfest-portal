@@ -20,24 +20,31 @@
         Login
       </p>
     </div>
-    <form action="/register" method="POST" id="register-form">
+    <form action="/login" method="POST" id="register-form">
       <div class="row register-form-holder">
         <div class="register-form  z-depth-4">
           <div class="instructions">
             * Marked Fields Are Mandatory
           </div>
+          <% if(message && message.length>0) { %>
+            <div class="custom-input">
+              <span class="card-panel red darken-4" style="display: block;width: 80%;">
+                  <%= message %>
+              </span>
+            </div>
+          <% } %>
             <div class="custom-input">
               <p>Email Address*</p>
-              <input name="email" type="email" required>
+              <input name="username" type="email" required>
             </div>
             <div class="custom-input">
               <p>Password*</p>
-              <input name="password" type="password">
+              <input name="password" type="password" required>
             </div>
             <br><br><br>
       </div>
       <div class="center register-submit">
-        <button class="custom-submit" type="submit">Submit</button>
+        <button class="custom-submit" type="submit">Login</button>
       <br>
       <br>
     </div>
