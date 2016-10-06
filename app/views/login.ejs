@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDG Devfest '16 | Register</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,300i,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/register.css">
+    <meta name="theme-color" content="#232240">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/formValidate.js"></script>
+    <link rel="icon" href="images/gdg.png">
+  </head>
+  <body>
+    <div class="row background-holder">
+      <img src="images/registertext1.png">
+      <p style="font-size: 150%">
+        Login
+      </p>
+    </div>
+    <form action="/register" method="POST" id="register-form">
+      <div class="row register-form-holder">
+        <div class="register-form  z-depth-4">
+          <div class="instructions">
+            * Marked Fields Are Mandatory
+          </div>
+            <div class="custom-input">
+              <p>Email Address*</p>
+              <input name="email" type="email" required>
+            </div>
+            <div class="custom-input">
+              <p>Password*</p>
+              <input name="password" type="password">
+            </div>
+            <br><br><br>
+      </div>
+      <div class="center register-submit">
+        <button class="custom-submit" type="submit">Submit</button>
+      <br>
+      <br>
+    </div>
+    </form>
+    <div class="row problems-contact">
+      <p>
+        Have a question? <a href="mailto:gdgvitvellore@gmail.com">gdgvitvellore@gmail.com</a>
+      </p>
+    </div>
+  </body>
+</html>
