@@ -645,6 +645,7 @@ body{
 .register-button{
     margin: auto;
     z-index: 1;
+    position :relative;
     color: white;
     display: inline;
 }
