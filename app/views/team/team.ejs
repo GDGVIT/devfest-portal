@@ -6,7 +6,7 @@
                 <span class="col m8 l8">
                     {{team.name}}
                 </span>
-                <span class="col m4 l4">
+                <span class="col m4 l4" class="custom-badge">
                     <% if(isTeamAdmin){ %>
                         <a href="" ng-click="deleteTeam()" class="badge">
                             Delete
@@ -45,31 +45,33 @@
             <input id="search" ng-model="searchMember" type="text"
                    placeholder="Search and add member">
         </div>
-        <table class="table" ng-hide="searchMember==''">
-            <tr>
-                <th>Name
-                </th>
-                <th>RegNo
-                </th>
-                <th>Email
-                </th>
-                <th>Action
-                </th>
-            </tr>
-            <tr ng-repeat="user in users  | filter: searchMember | invitationFilter | limitTo: 5">
-                <td>{{user.name}}
-                </td>
-                <td>{{user.regNo}}
-                </td>
-                <td>{{user.email}}
-                </td>
-                <td>
-                    <a href="" ng-click="invite(user)" class="new badge blue">
-                        Invite
-                    </a>
-                </td>
-            </tr>
-        </table>
+            <div class="invite-table-holder">
+              <table class="responsive-table" ng-hide="searchMember==''">
+                <tr>
+                    <th>Name
+                    </th>
+                    <th>RegNo
+                    </th>
+                    <th>Email
+                    </th>
+                    <th>Action
+                    </th>
+                </tr>
+                <tr ng-repeat="user in users  | filter: searchMember | invitationFilter | limitTo: 5">
+                    <td>{{user.name}}
+                    </td>
+                    <td>{{user.regNo}}
+                    </td>
+                    <td>{{user.email}}
+                    </td>
+                    <td>
+                        <a href="" ng-click="invite(user)" class="new badge blue">
+                            Invite
+                        </a>
+                    </td>
+                </tr>
+            </table>
+          </div>
     </div>
 
     <div id="teamModalBig" class="modal">
