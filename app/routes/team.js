@@ -92,11 +92,12 @@ module.exports.init = function(inject){
                             if(user){
                                 if(user.team && user.team.toString()==team._id.toString()){
                                     user.team = undefined;
-                                    user.team.save(function(err){
+                                    user.save(function(err){
                                     });
                                 }
                             }
-                        }catch(err){}
+                        }catch(err){
+                        }
                     });
                 });
                 team.remove(function(err){
@@ -108,6 +109,14 @@ module.exports.init = function(inject){
                     });
                 });
             });
+    });
+
+    router.get("/detach",function(req,res,next){
+        req.user.team = undefined;
+        req.user.save(function(err){
+            if(err)throw err;
+            return res.sendStatus(200);
+        });
     });
 
     router.post("/leave",function(req,res,next){

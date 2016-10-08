@@ -51,6 +51,7 @@ injector.injectRoute(app,"/","auth");
 injector.injectRoute(app,"/admin","admin");
 injector.injectRoute(app,"/profile","user");
 injector.injectRoute(app,"/team","team");
+injector.injectRoute(app,"/api","api");
 
 
 //PASSPORT

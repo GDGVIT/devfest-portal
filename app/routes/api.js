@@ -69,10 +69,10 @@ module.exports.init = function(inject){
                     status : 401,
                     message : "Authentication failed"
                 });
-
+                console.log("Authentication successful");
                 jwt.sign({
                     uid : user._id.toString()
-                }, signingKey, { algorithm: "HS256" }, function(err, token) {
+                }, config.api.signingKey, { algorithm: "HS256" }, function(err, token) {
                     if(err)return res.json({
                         status : 500,
                         message : "Internal Server Error"
@@ -100,7 +100,7 @@ module.exports.init = function(inject){
                         "team" : undefined
                     };
 
-                    if(!team)return res.json(json);
+                    if(!user.team)return res.json(json);
                     Team.findOne(user.team).populate("members.user").exec(function(err,team){
                         if(err)return res.json({
                             status : 500,
