@@ -1,0 +1,61 @@
+.time{
+  color: rgba(255,255,255,0.8);
+  font-size: 400%;
+}
+.time span{
+  font-size: 50%;
+  margin-left: 5px;
+}
+.time-card{
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.card-img{
+  width: 100%;
+  height: 16%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.speaker-card{
+  height: 22%;
+}
+.card-img-overlay{
+  position: absolute;
+  background: rgba(0,0,0,0.56);
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  padding: 3%;
+  color: rgba(255,255,255,0.8);
+  font-size: 150%;
+}
+.card-img-overlay span{
+  margin-top: 5px;
+  font-size: 70%;
+  line-height:250%;
+}
+.speaker-card .card-img-overlay span{
+  margin-top: 100px;
+}
+.timeline-holder{
+  margin-top: -8%;
+}
+.timeline-heading{
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  font-size: 250%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+
+}
+@media(min-width:1920px){
+  *{
+    font-size: 107%;
+  }
+}
+@media(max-width:600px){
+  .speaker-card{
+    height: 40%
+  }
+}

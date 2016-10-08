@@ -355,6 +355,14 @@ input[disabled=disabled]{
 .selector{
   border-bottom: 1px solid grey;
 }
+.invite-table-holder tr .badge{
+  color: white;
+  font-size: 90%;
+  padding: 0 10px;
+}
+.custom-badge .badge{
+  padding: 0 10px;
+}
 @media only screen and (min-device-width: 760px) and (max-device-width: 1023px){
   .team-info-header .badge{
     margin-top: 6.6vh;
