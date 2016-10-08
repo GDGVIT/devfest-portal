@@ -5,6 +5,7 @@ var Team = require("../models/team");
 var router = express.Router();
 var config = require("../../config");
 var inter = require("../interceptors");
+var apis = require("../../apis.js");
 
 var maxMembers = config.maxMembers;
 
@@ -51,7 +52,12 @@ module.exports.init = function(inject){
             members : [{
                 user : req.user._id,
                 status : "admin"
-            }]
+            }],
+            apis : [
+                apis[Math.floor(Math.random()*apis.length)],
+                apis[Math.floor(Math.random()*apis.length)],
+                apis[Math.floor(Math.random()*apis.length)]
+            ]
         });
         team.save(function (err) {
             if (err){console.log(err);return res.sendStatus(500);}

@@ -1,6 +1,8 @@
 var passport = require('passport');
 var config = require("../config");
 var jwt = require("jsonwebtoken");
+var User = require("./models/user");
+var Team = require("./models/team");
 
 var $ = module.exports;
 
@@ -51,8 +53,8 @@ $.isVerified = function (req, res, next) {
         return res.redirect("/login");
     }
 }
-
-$.authenticate = function(req,res,next){
+$.api = {};
+$.api.authenticate = function(req,res,next){
     var token = req.body.auth_token || req.query.authToken;
     if(!token)return res.json({
         status : 401,
@@ -75,5 +77,25 @@ $.authenticate = function(req,res,next){
             req.user = user;
             next();
         })
+    })
+}
+
+$.api.putTeam = function(req,res,next){
+    if(!req.user.team)return res.json({
+        status : 500,
+        message : "User not part of any team"
+    });
+    Team.findById(req.user.team).populate("members.user").exec(function(err,team){
+        if(err)return res.json({
+            status : 500,
+            message : "Internal Server Error"
+        });
+        if(!team)return res.json({
+            status : 500,
+            message : "Team not found"
+        });
+        req.team = team;
+        req.isAdmin = (team.admin.toString()==req.user._id.toString());
+        next();
     })
 }

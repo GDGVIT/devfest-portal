@@ -4,42 +4,35 @@ var User = require("../models/user");
 var Team = require("../models/team");
 var router = express.Router();
 var config = require("../../config");
-var inter = require("../interceptors");
+var apis = require("../../apis");
+var inter = require("../interceptors").api;
 var jwt = require("jsonwebtoken");
 
 module.exports.router = router;
-/*
-
-{
-    "status" : status_code,
-    "message" : status_message,
-    "user" : {
-        "auth_token" : authentication_token,
-        "name" : users_name,
-        "email" : email,
-        "reg_no" : user_reg_no,
-        "phone" :user_phone_number ,
-        "block_room" :user_block_room,
-        "gender" : m/f,
-        "linkedin" : linkedin_url,
-        "github" : github_url,
-        "behance" : behance_url,
-        "isAdmin" : true/false,
-        "skills" : [string-array of skills],
-        "slot_last_used" : *slot_countdown_time,
-        "slot_tries" : times_slot_triggered
-    },
-    "team" : {
-        "name" : team_name,
-        "members" : [{
-            "name" :member_name,
-            "position" : member_position,
-            "status" : member_status
-        }]
-    }
-}
-*/
 module.exports.init = function(inject){
+
+    router.post("/apis",inter.authenticate,inter.putTeam,function(req,res){
+        if(!req.isAdmin){
+            return res.json({
+                status : 401,
+                message : "Only admin can access slot details"
+            });
+        }
+        if(!req.team.apis || req.team.apis.length==0){
+            req.team.apis = [
+                apis[Math.floor(Math.random()*apis.length)],
+                apis[Math.floor(Math.random()*apis.length)],
+                apis[Math.floor(Math.random()*apis.length)]
+            ];
+            req.team.save();
+        }
+        return res.json({
+            status : 200,
+            message : "ok",
+            apis : req.team.apis
+        });
+    });
+
     router.post("/login",function (req, res, next) {
         if(!req.body.email || !req.body.password){
             return res.json({

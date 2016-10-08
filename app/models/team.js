@@ -27,7 +27,8 @@ var userSchema = mongoose.Schema({
     },
     shortlisted : Boolean,
     idea : String,
-    projectUrl : String
+    projectUrl : String,
+    apis : [{}]
 });
 
 module.exports = mongoose.model("Team",userSchema);
