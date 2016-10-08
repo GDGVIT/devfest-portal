@@ -50,6 +50,6 @@ module.exports.init = function(inject){
                 u : user
             });
         });
-    });
+    }); 
 
 }

@@ -1,4 +1,6 @@
 var passport = require('passport');
+var config = require("../config");
+var jwt = require("jsonwebtoken");
 
 var $ = module.exports;
 
@@ -48,4 +50,30 @@ $.isVerified = function (req, res, next) {
         req.flash("message","Email not verified");
         return res.redirect("/login");
     }
+}
+
+$.authenticate = function(req,res,next){
+    var token = req.body.auth_token || req.query.authToken;
+    if(!token)return res.json({
+        status : 401,
+        message : "Token not found"
+    });
+    jwt.verify(token,config.api.signingKey,function(err,obj){
+        if(err)return res.json({
+            status : 400,
+            message : "Invalid token found"
+        });
+        User.findById(obj.uid,function(err,user){
+            if(err)return res.json({
+                status : 500,
+                message : "Internal Server Error"
+            });
+            if(!user)return res.json({
+                status : 401,
+                message : "User not found"
+            });
+            req.user = user;
+            next();
+        })
+    })
 }

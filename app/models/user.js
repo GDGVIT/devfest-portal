@@ -52,7 +52,12 @@ var userSchema = mongoose.Schema({
     },
     github : String,
     linkedIn : String,
-    behance : String
+    behance : String,
+    slot_last_used : Date,
+    slot_tries : {
+        type : Number,
+        default : 0
+    }
 });
 userSchema.plugin(passportLocalMongoose);
 

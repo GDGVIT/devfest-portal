@@ -8,6 +8,9 @@ module.exports.router = router;
 module.exports.init = function(inject){
 
     router.get("/register",function(req,res){
+        if(req.isAuthenticated()){
+            return res.redirect("/profile");
+        }
         res.locals.errField = "";
         res.locals.req = req;
         res.render("register");
@@ -157,6 +160,9 @@ module.exports.init = function(inject){
     });
 
     router.get("/login",function(req,res){
+        if(req.isAuthenticated()){
+            return res.redirect("/profile");
+        }
         res.render("login");
     });
 
