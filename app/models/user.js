@@ -53,7 +53,10 @@ var userSchema = mongoose.Schema({
     github : String,
     linkedIn : String,
     behance : String,
-    slot_last_used : Date,
+    slot_last_used : {
+        type : Number,
+        default : 0
+    },
     slot_tries : {
         type : Number,
         default : 0
