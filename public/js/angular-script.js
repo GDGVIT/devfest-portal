@@ -23,6 +23,7 @@ var scope;
 app.controller("controller",function($scope){
     $scope.loading = false;
     scope = $scope;
+    $scope.edit=true;
 });
 
 app.controller('mainController',function($scope){

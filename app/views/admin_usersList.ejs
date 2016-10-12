@@ -35,10 +35,7 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>regNo</th>
-                        <th>email</th>
-                        <th>verified</th>
-                        <th>contact</th>
-                        <th>Actions</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -47,10 +44,7 @@
                             <td><%= index %></td>
                             <td><%= u.name %></td>
                             <td><%= u.regNo %></td>
-                            <td><%= u.email %></td>
-                            <td><%= u.verified?"verified":"" %></td>
-                            <td><%= u.contact %></td>
-                            <td><a class="waves-effect waves-light btn" href="/admin/user/<%- u.email %>">View</a></td>
+                            
                         </tr>
                     <% }) %>
                 </tbody>

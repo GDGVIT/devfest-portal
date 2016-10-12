@@ -1,6 +1,6 @@
 
 <div class="team-main">
-    <div class="blue-bar">Hi John</div>
+    <div class="blue-bar">Hi <%= user.name %></div>
     <% invitations.forEach(function(team){ %>
         <div class="notification">
             <%= team.admin.name %> invited you to join his team - <%= team.name %>.
@@ -12,7 +12,7 @@
     <br><br>
     <div class="center">
         Create your own team<br>
-        <a class="waves-effect waves-purple btn-flat" href="#/create">Create Team</a>
+        <a class="btn-flat custom-submit black-text" style="padding-top:0;padding-bottom:10px;" href="#/create">Create Team</a>
     </div>
 
     <!-- Modal Structure -->
@@ -25,9 +25,8 @@
         <br><br>
         <div class="add-team-desc">
             <div class="col m10 l10 push-m1 push-l1">
-                Your space seems to be empty. Before embarking on this mission we recommend you to <a
-                        id="join-team" ng-click="join=!join;">join a team</a> or <a id="create-team">create
-                    a team</a>
+                Your space seems to be empty. Before embarking on this mission we recommend you to create
+                    a team
             </div>
         </div>
     </div>
