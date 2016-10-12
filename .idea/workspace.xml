@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ad6a0065-c2d1-49af-ac2a-13cd54815368" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/interceptors.js" afterPath="$PROJECT_DIR$/app/interceptors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/team.js" afterPath="$PROJECT_DIR$/app/routes/team.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/user.js" afterPath="$PROJECT_DIR$/app/routes/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/team/main.ejs" afterPath="$PROJECT_DIR$/app/views/team/main.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apis.js" afterPath="$PROJECT_DIR$/apis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.js" afterPath="$PROJECT_DIR$/app/models/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/api.js" afterPath="$PROJECT_DIR$/app/routes/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/error_404.ejs" afterPath="$PROJECT_DIR$/app/views/error_404.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.ejs" afterPath="$PROJECT_DIR$/app/views/login.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/team/team.ejs" afterPath="$PROJECT_DIR$/app/views/team/team.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/angular-script.js" afterPath="$PROJECT_DIR$/public/js/angular-script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/timeline.css" afterPath="$PROJECT_DIR$/public/css/timeline.css" />
     </list>
     <ignored path="codeboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,9 +32,11 @@
       <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1704">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="90">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <marker date="1475949095212" expanded="true" signature="300:310" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,9 +57,13 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="684">
+              <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+              <folding>
+                <marker date="1475768738631" expanded="true" signature="328:3871" ph="{...}" />
+                <marker date="1475768738631" expanded="true" signature="2143:2153" ph="{...}" />
+                <marker date="1475768738631" expanded="true" signature="2143:2161" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,15 +71,78 @@
       <file leaf-file-name="team.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/team.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+            <state relative-caret-position="1476">
+              <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
               <folding>
-                <element signature="e#781#1367#0" expanded="false" />
-                <element signature="e#1424#1611#0" expanded="false" />
-                <element signature="e#1647#1972#0" expanded="false" />
-                <element signature="e#10349#11603#0" expanded="false" />
-                <element signature="e#11660#12590#0" expanded="false" />
-                <marker date="1475179335895" expanded="false" signature="3865:5827" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4284:4293" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4284:4301" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4284:13815" ph="{...}" />
+                <marker date="1475955087737" expanded="false" signature="4352:6314" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4380:4541" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4410:4529" ph="{&quot;message&quot;: &quot;Sorry. You are not the member of any team.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="4616:6306" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4710:4830" ph="{&quot;message&quot;: &quot;Request failed. Team not found.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="4901:5113" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="4939:5093" ph="{&quot;message&quot;: &quot;Sorry. You are the admin. You cannot abandon the team&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="5169:6148" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="5251:6130" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="5313:5931" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="5429:5903" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="5616:5871" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="5741:5835" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="5972:6106" ph="{&quot;message&quot;: &quot;You are not a member.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="6181:6290" ph="{&quot;message&quot;: &quot;You are not a member&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="6372:8324" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="6400:6561" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="6430:6549" ph="{&quot;message&quot;: &quot;Sorry. You are not the member of any team.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="6692:8316" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="6786:6906" ph="{&quot;message&quot;: &quot;Request failed. Team not found.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="6977:7193" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="7015:7173" ph="{&quot;message&quot;: &quot;Sorry. You are not the admin. You cannot remove a member.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="7249:8162" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="7323:8144" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="7431:8120" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="7572:8092" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="7800:7995" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="7920:7959" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="8195:8300" ph="{&quot;message&quot;: &quot;Member not found&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="8378:10775" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="8406:8565" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="8436:8554" ph="{&quot;message&quot;: &quot;Sorry, you are not the admin of any team.&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="8691:10767" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="8761:8914" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="8795:8898" ph="{&quot;message&quot;: &quot;Team not found&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="8977:9149" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9011:9133" ph="{&quot;message&quot;: &quot;Sorry, You are not the team admin&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="9197:9399" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9231:9383" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9450:9899" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9520:9885" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9552:9681" ph="{&quot;message&quot;: &quot;User already in members list&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="9740:9825" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9966:10755" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="9991:10096" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="10122:10302" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="10160:10282" ph="{&quot;message&quot;: &quot;Invalid user selected&quot;...}" />
+                <marker date="1475955087737" expanded="true" signature="10337:10432" ph="{&quot;user&quot;: user._id...}" />
+                <marker date="1475955087737" expanded="true" signature="10474:10739" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="10503:10620" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="10657:10719" ph="{...}" />
+                <marker date="1475955087737" expanded="false" signature="10836:12090" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="10920:10982" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="11062:12082" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="11229:12011" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="11311:11993" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="11374:11919" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="11499:11891" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="11685:11859" ph="{...}" />
+                <marker date="1475955087737" expanded="false" signature="12147:13077" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="12285:13069" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="12452:12998" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="12534:12980" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="12597:12906" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="12713:12878" ph="{...}" />
+                <marker date="1475955087737" expanded="true" signature="13085:13813" ph="//..." />
               </folding>
             </state>
           </provider>
@@ -81,11 +151,9 @@
       <file leaf-file-name="team.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/team/team.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1872">
+              <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,18 +161,38 @@
       <file leaf-file-name="angular-script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/angular-script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+            <state relative-caret-position="2538">
+              <caret line="141" column="13" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="team.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/team.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error_404.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/error_404.ejs">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,7 +246,6 @@
         <option value="$PROJECT_DIR$/app/routes/index.js" />
         <option value="$PROJECT_DIR$/app/views/team/create.ejs" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/app/models/team.js" />
         <option value="$PROJECT_DIR$/public/profile.ejs" />
         <option value="$PROJECT_DIR$/public/css/profile.css" />
         <option value="$PROJECT_DIR$/app/views/profile.ejs" />
@@ -174,6 +261,7 @@
         <option value="$PROJECT_DIR$/app/routes/user.js" />
         <option value="$PROJECT_DIR$/app/views/team/main.ejs" />
         <option value="$PROJECT_DIR$/app/views/team/team.ejs" />
+        <option value="$PROJECT_DIR$/app/models/team.js" />
       </list>
     </option>
   </component>
@@ -187,10 +275,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="y" value="46" />
-    <option name="width" value="959" />
-    <option name="height" value="1033" />
+    <option name="y" value="21" />
+    <option name="width" value="1920" />
+    <option name="height" value="1059" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -217,7 +304,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -396,12 +482,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../devfest-register" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
@@ -486,25 +573,24 @@
       <workItem from="1475068339099" duration="1793000" />
       <workItem from="1475070935330" duration="12178000" />
       <workItem from="1475160227797" duration="19528000" />
+      <workItem from="1476273886093" duration="1912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33872000" />
+    <option name="totallyTimeSpent" value="35784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="46" width="959" height="1033" extended-state="4" />
+    <frame x="0" y="21" width="1920" height="1059" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26590198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13229166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -513,10 +599,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -536,14 +624,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pythontest.js" />
     <entry file="file://$PROJECT_DIR$/app/views/admin_challenge_testcases.ejs" />
     <entry file="file://$PROJECT_DIR$/app/views/admin_contests_details.ejs" />
     <entry file="file://$PROJECT_DIR$/app/inject.js">
@@ -593,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-160">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="189" column="42" selection-start-line="185" selection-start-column="36" selection-end-line="189" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="355" column="32" selection-start-line="355" selection-start-column="32" selection-end-line="355" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,14 +792,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/angular-script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+        <state relative-caret-position="2538">
+          <caret line="141" column="13" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -756,23 +818,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1704">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1475949095212" expanded="true" signature="300:310" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="684">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding>
+            <marker date="1475768738631" expanded="true" signature="328:3871" ph="{...}" />
+            <marker date="1475768738631" expanded="true" signature="2143:2153" ph="{...}" />
+            <marker date="1475768738631" expanded="true" signature="2143:2161" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -780,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,39 +854,115 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/team/team.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1872">
+          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/team.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+        <state relative-caret-position="1476">
+          <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
           <folding>
-            <element signature="e#781#1367#0" expanded="false" />
-            <element signature="e#1424#1611#0" expanded="false" />
-            <element signature="e#1647#1972#0" expanded="false" />
-            <element signature="e#10349#11603#0" expanded="false" />
-            <element signature="e#11660#12590#0" expanded="false" />
-            <marker date="1475179335895" expanded="false" signature="3865:5827" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4284:4293" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4284:4301" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4284:13815" ph="{...}" />
+            <marker date="1475955087737" expanded="false" signature="4352:6314" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4380:4541" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4410:4529" ph="{&quot;message&quot;: &quot;Sorry. You are not the member of any team.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="4616:6306" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4710:4830" ph="{&quot;message&quot;: &quot;Request failed. Team not found.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="4901:5113" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="4939:5093" ph="{&quot;message&quot;: &quot;Sorry. You are the admin. You cannot abandon the team&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="5169:6148" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="5251:6130" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="5313:5931" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="5429:5903" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="5616:5871" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="5741:5835" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="5972:6106" ph="{&quot;message&quot;: &quot;You are not a member.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="6181:6290" ph="{&quot;message&quot;: &quot;You are not a member&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="6372:8324" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="6400:6561" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="6430:6549" ph="{&quot;message&quot;: &quot;Sorry. You are not the member of any team.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="6692:8316" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="6786:6906" ph="{&quot;message&quot;: &quot;Request failed. Team not found.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="6977:7193" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="7015:7173" ph="{&quot;message&quot;: &quot;Sorry. You are not the admin. You cannot remove a member.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="7249:8162" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="7323:8144" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="7431:8120" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="7572:8092" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="7800:7995" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="7920:7959" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="8195:8300" ph="{&quot;message&quot;: &quot;Member not found&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="8378:10775" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="8406:8565" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="8436:8554" ph="{&quot;message&quot;: &quot;Sorry, you are not the admin of any team.&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="8691:10767" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="8761:8914" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="8795:8898" ph="{&quot;message&quot;: &quot;Team not found&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="8977:9149" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9011:9133" ph="{&quot;message&quot;: &quot;Sorry, You are not the team admin&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="9197:9399" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9231:9383" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9450:9899" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9520:9885" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9552:9681" ph="{&quot;message&quot;: &quot;User already in members list&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="9740:9825" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9966:10755" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="9991:10096" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="10122:10302" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="10160:10282" ph="{&quot;message&quot;: &quot;Invalid user selected&quot;...}" />
+            <marker date="1475955087737" expanded="true" signature="10337:10432" ph="{&quot;user&quot;: user._id...}" />
+            <marker date="1475955087737" expanded="true" signature="10474:10739" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="10503:10620" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="10657:10719" ph="{...}" />
+            <marker date="1475955087737" expanded="false" signature="10836:12090" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="10920:10982" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="11062:12082" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="11229:12011" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="11311:11993" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="11374:11919" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="11499:11891" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="11685:11859" ph="{...}" />
+            <marker date="1475955087737" expanded="false" signature="12147:13077" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="12285:13069" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="12452:12998" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="12534:12980" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="12597:12906" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="12713:12878" ph="{...}" />
+            <marker date="1475955087737" expanded="true" signature="13085:13813" ph="//..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/team.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/error_404.ejs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
           <folding />
         </state>
       </provider>

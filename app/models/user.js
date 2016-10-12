@@ -60,6 +60,11 @@ var userSchema = mongoose.Schema({
     slot_tries : {
         type : Number,
         default : 0
+    },
+    slots : [String],
+    winner : {
+        type : Boolean,
+        default : false
     }
 });
 userSchema.plugin(passportLocalMongoose);
