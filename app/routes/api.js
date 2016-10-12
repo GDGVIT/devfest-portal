@@ -122,6 +122,10 @@ module.exports.init = function(inject){
                     message : "Authentication failed"
                 });
                 console.log("Authentication successful");
+                if(!user.verified)return res.json({
+                    status : 406,
+                    message : "Email not verified"
+                });
                 jwt.sign({
                     uid : user._id.toString()
                 }, config.api.signingKey, { algorithm: "HS256" }, function(err, token) {
