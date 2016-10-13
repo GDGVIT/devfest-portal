@@ -1034,6 +1034,19 @@ nav{
 .faq p{
   background: white;
 }
+.problem-stmt{
+  position:absolute;
+  top:6%;
+  right:3%;
+}
+@media(max-width:360px){
+  .homepage-buttons .register-button .custom-yellow-background{
+    padding:10px;
+    padding-left:40px;
+    padding-right:40px;
+  }
+}
+
 @media(max-width: 1200px){
   .date{
     padding-left: 0px !important;
