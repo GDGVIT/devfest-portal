@@ -27,6 +27,7 @@
     "jsonwebtoken" : "latest",
     "basic-auth" : "latest",
     "nodemailer-postmark-transport" : "latest",
-    "nodemailer-smtp-transport" : "latest"
+    "nodemailer-smtp-transport" : "latest",
+    "msg91":"latest"
   }
 }
