@@ -65,7 +65,11 @@ var userSchema = mongoose.Schema({
     winner : {
         type : Boolean,
         default : false
-    }
+    },
+    otp : {
+        type : Number
+    },
+    otpGeneratedAt : Date
 });
 userSchema.plugin(passportLocalMongoose);
 

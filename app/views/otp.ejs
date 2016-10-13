@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GDG Devfest '16 | Register</title>
+    <title>GDG Devfest '16 | Forgot Password</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,300i,400" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,14 +17,14 @@
     <div class="row background-holder">
       <img src="images/registertext1.png">
       <p style="font-size: 150%">
-        Login
+        Forgot Password Verification
       </p>
     </div>
-    <form action="/login" method="POST" id="register-form">
+    <form action="/updatePassword" method="POST" id="register-form">
       <div class="row register-form-holder">
         <div class="register-form  z-depth-4">
           <div class="instructions">
-            * Marked Fields Are Mandatory
+            * Enter your email address of your account and OTP from your registered mobile number.
           </div>
           <% if(message && message.length>0) { %>
             <div class="custom-input">
@@ -35,18 +35,30 @@
           <% } %>
             <div class="custom-input">
               <p>Email Address*</p>
-              <input name="username" type="email" required>
+              <input name="email" type="email" required>
             </div>
-            <div class="custom-input">
-              <p>Password*</p>
-              <input name="password" type="password" required>
-            </div>
+
+          <div class="custom-input">
+            <p>OTP*</p>
+            <input name="otp" type="number" required>
+          </div>
+
+          <div class="custom-input">
+            <p>New Password*</p>
+            <input name="password" type="password" required>
+          </div>
+
+
+          <div class="custom-input">
+            <p>Confirm Password*</p>
+            <input name="confirmPassword" type="password" required>
+          </div>
+
             <br><br><br>
       </div>
       <div class="center register-submit">
-        <button class="custom-submit" type="submit">Login</button>
+        <button class="custom-submit" type="submit">Update Password</button>
       <br>
-        <a href="/forgotPassword">Forgot password.</a>
       <br>
     </div>
     </form>

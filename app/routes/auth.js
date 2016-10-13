@@ -1,8 +1,10 @@
 var express = require("express");
 var passport = require('passport');
 var User = require("../models/user");
+var config = require("../../config");
 var email = require("../util/email-smtp");
 var router = express.Router();
+var msg91 = require("msg91")(config.msg91.apiKey, "GDGVIT", "transactional" );
 
 module.exports.router = router;
 module.exports.init = function(inject){
@@ -157,6 +159,115 @@ module.exports.init = function(inject){
                 })
             }
         });
+    });
+
+    router.get("/forgotPassword",function(req,res){
+        if(req.isAuthenticated()){
+            return res.redirect("/profile");
+        }
+        res.render("forgotPassword");
+    });
+
+    router.post("/sendOTP",function(req,res){
+        if(req.isAuthenticated()){
+            return res.redirect("/profile");
+        }
+        var email = "";
+        if(req.body.email)email = req.body.email.toString().toLowerCase();
+        console.log("Email :: ",email);
+        User.findOne({
+            email : email
+        }).exec(function(err,user){
+            if(err){
+                return res.sendStatus(500);
+            }
+            if(!user){
+                req.flash("message","User not found");
+                return res.redirect("/forgotPassword");
+            }
+            if(user.otp!=undefined){
+                if((user.otpGeneratedAt.getTime() + 900000) > new Date().getTime()){
+                    user.otp = Math.floor(Math.random() * 89999)+10000;
+                    user.save();
+                    user.otpGeneratedAt = new Date();
+                }
+            }else{
+                user.otp = Math.floor(Math.random() * 89999)+10000;
+                user.save();
+                user.otpGeneratedAt = new Date();
+            }
+            console.log("OTP generated :: "+user.otp);
+
+            msg91.send(user.contact,"OTP for devfest gdg password reset : "+user.otp+". Valid for 15 minutes.",function(err,response){
+                if(err){
+                    req.flash("message","Failed to send message.");
+                    return res.redirect("/forgotPassword");
+                }
+                return res.redirect("/otp");
+            });
+
+        });
+    });
+
+    router.get("/otp",function (req, res) {
+        if(req.isAuthenticated()){
+            return res.redirect("/profile");
+        }
+        res.render("otp");
+    });
+
+    router.post("/updatePassword",function(req,res){
+        if(req.isAuthenticated()){
+            return res.redirect("/profile");
+        }
+        if(!req.body.email || !req.body.otp || !req.body.password || !req.body.password || !req.body.confirmPassword){
+            return res.sendStatus(400);
+        }
+        if(req.body.password != req.body.confirmPassword){
+            req.flash("message","Passwords do not match.");
+            return res.redirect("/otp");
+        }
+        var email = req.body.email.toString().toLowerCase();
+        var otp = req.body.otp;
+        var password = req.body.password;
+        if(!/^.{5,}$/.test(req.password)){
+            req.flash("message","Password is of minimum 5 characters.");
+            return res.redirect("/otp");
+        }
+        User.findOne({
+            email : email
+        },function(err,user){
+            if(err)return res.sendStatus(500)
+            if(!user){
+                req.flash("message","User not found");
+                return res.redirect("/otp");
+            }
+            if(user.otp==undefined){
+                req.flash("message","OTP not generated");
+                return res.redirect("/otp");
+            }
+            console.log("otpGeneratedAt :: ",(new Date().getTime() - user.otpGeneratedAt.getTime()));
+            if((new Date().getTime() - user.otpGeneratedAt.getTime()) > 900000){
+                req.flash("message","OTP has expired.");
+                return res.redirect("/otp");
+            }
+            if(user.otp.toString() != otp){
+                req.flash("message","Invalid OTP.")
+                return res.redirect("/otp")
+            }
+            user.otp = undefined;
+            user.otpGeneratedAt = undefined;
+            user.setPassword(password,function (err,user) {
+                if(err){
+                    req.flash("message","Password update failed.");
+                    return res.redirect("/otp");
+                }
+                user.save();
+                req.flash("message","Password updated successfully");
+                return res.redirect("/login");
+            });
+
+        })
     });
 
     router.get("/login",function(req,res){
