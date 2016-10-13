@@ -307,12 +307,19 @@ input[disabled=disabled]{
   cursor: pointer;
   margin: 20px;
 }
-
+.problem-stmt-in{
+  margin-top: 10px;
+}
 @media(max-width:600px){
   .personal-info{
     margin-top:20px;
     padding-left:4%;
     font-size:105%;
+  }
+  .team-info-header .badge{
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .create-join{
     margin-top:20%;
