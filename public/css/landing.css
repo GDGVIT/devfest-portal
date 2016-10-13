@@ -1034,6 +1034,11 @@ nav{
 .faq p{
   background: white;
 }
+.problem-stmt{
+  position:absolute;
+  top:6%;
+  right:3%;
+}
 @media(max-width: 1200px){
   .date{
     padding-left: 0px !important;
