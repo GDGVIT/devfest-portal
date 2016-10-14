@@ -1,4 +1,5 @@
-module.exports.social = [{
+module.exports.social = [
+{
     name : "Github API",
     url : "https://developer.github.com/v3/",
     logo : "https://pbs.twimg.com/profile_images/1978599420/electrocat.png"
@@ -6,7 +7,7 @@ module.exports.social = [{
 {
     name : "Face plus plus",
     url : "http://www.faceplusplus.com/uc_home/",
-    logo : "https://avatars3.githubusercontent.com/u/2667818?v=3&s=200"
+    logo : "http://devfest.gdgvitvellore.com/images/api/face++.png"
 },
 {
     name : "Gitter",
@@ -31,18 +32,18 @@ module.exports.social = [{
 {
     name : "FourSquare",
     url : 'http://pokeapi.co/',
-    logo : "https://pbs.twimg.com/profile_images/491965445516193792/Elg-IJOS_400x400.png"
+    logo : "http://devfest.gdgvitvellore.com/images/api/foursquare.png"
 
 },
 {
     name : "LinkedIn API",
     url : 'https://developer.linkedin.com/',
-    logo : "https://pbs.twimg.com/profile_images/614583061448036352/CBpFkPaz.png"
+    logo : "http://devfest.gdgvitvellore.com/images/api/linkedin.png"
 },
 {
     name : "Youtube Developer API`",
     url : 'https://developers.google.com/youtube/',
-    logo : "https://lh5.ggpht.com/jZ8XCjpCQWWZ5GLhbjRAufsw3JXePHUJVfEvMH3D055ghq0dyiSP3YxfSc_czPhtCLSO=w300"
+    logo : "http://devfest.gdgvitvellore.com/images/api/youtube.png"
 }
 ]
 
