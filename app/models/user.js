@@ -76,11 +76,10 @@ var userSchema = mongoose.Schema({
             type : Boolean,
             default : false
         },
-        foodType : {
+        couponType : {
             type : String,
             enum : ["breakfast","dinner","snacks"]
-        },
-        logo : String
+        }
     }]
 });
 userSchema.plugin(passportLocalMongoose);

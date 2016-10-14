@@ -193,9 +193,97 @@ module.exports.init = function(inject){
         });
     });
 
-    router.post("/coupons",inter.authenticate,function(req,res){
-        return
+    function generateCoupon(req,res,type,next){
+        jwt.sign({
+            userId : req.user._id.toString(),
+            id : req.user.coupons.length
+        },config.api.signingKey,{algorithm : "HS256"},function (err, token) {
+            if(err)return res.json({
+                status : 500,
+                message : "Internal Server Error"
+            });
+            req.user.coupons.push({
+                code : token,
+                couponType : type,
+                used : false
+            });
+        });
+    }
+
+    router.post("/coupons",inter.authenticate,function(req,res,next){
+        if(!req.user.coupons || req.user.coupons.length==0){
+            req.user.coupons = [];
+            generateCoupon(req,res,"dinner",function () {
+                generateCoupon(req,res,"snacks",function () {
+                    req.user.save(function(err){
+                        if(err)return res.json({
+                            status : 500,
+                            message : "Internal Server Error"
+                        });
+                        next();
+                    });
+                });
+            });
+        }else{
+            next();
+        }
+    },function (req,res,next) {
+        return res.json({
+            status : 200,
+            message : "ok",
+            coupons : req.user.coupons
+        });
     });
+
+    router.post("/redeemCoupon",inter.authenticate,function (req, res, next) {
+        if(req.user.email != "mohdakram.ansari2015@vit.ac.in"){
+            return res.json({
+                status : 401,
+                message : "Not an admin"
+            });
+        }
+        if(!req.body.coupon){
+            return res.json({
+                status : 400,
+                message : "Bad request"
+            });
+        }
+        jwt.verify(req.body.coupon.toString(),config.api.signingKey,function (err, obj) {
+            if(err){
+                return res.json({
+                    status : 500,
+                    message : "Failed to verify token"
+                });
+            }
+            User.findById(obj.userId,function (err, user) {
+                if(err)return res.json({
+                    status : 500,
+                    message : "Internal Server Error"
+                })
+                if(!user)return res.json({
+                    status : 500,
+                    message : "User not found"
+                })
+                if(!user.coupons[obj.id])return res.json({
+                    status : 500,
+                    message : "Coupon not found"
+                });
+                var coupon = user.coupons[obj.id];
+                if(coupon.used)return res.json({
+                    status : 500,
+                    message : "Coupon used"
+                });
+                coupon.used = true;
+                user.save(function(err){
+                    if(err)return res.json({
+                        status : 500,
+                        message : "Internal Server Error"
+                    });
+                    return res.json(coupon);
+                })
+            })
+        })
+    })
 
     router.post("/timeline",function(req,res){
         return res.json({
