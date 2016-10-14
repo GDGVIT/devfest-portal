@@ -69,7 +69,14 @@ var userSchema = mongoose.Schema({
     otp : {
         type : Number
     },
-    otpGeneratedAt : Date
+    otpGeneratedAt : Date,
+    coupons : [{
+        code : String,
+        used : {
+            type : Boolean,
+            default : false
+        }
+    }]
 });
 userSchema.plugin(passportLocalMongoose);
 
