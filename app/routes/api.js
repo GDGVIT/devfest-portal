@@ -194,7 +194,7 @@ module.exports.init = function(inject){
     });
 
     router.post("/coupons",inter.authenticate,function(req,res){
-
+        return
     });
 
     router.post("/timeline",function(req,res){

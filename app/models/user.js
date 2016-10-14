@@ -75,7 +75,12 @@ var userSchema = mongoose.Schema({
         used : {
             type : Boolean,
             default : false
-        }
+        },
+        foodType : {
+            type : String,
+            enum : ["breakfast","dinner","snacks"]
+        },
+        logo : String
     }]
 });
 userSchema.plugin(passportLocalMongoose);
