@@ -1,4 +1,4 @@
-module.exports = [{
+module.exports.social = [{
     name : "Github API",
     url : "https://developer.github.com/v3/",
     logo : "https://pbs.twimg.com/profile_images/1978599420/electrocat.png"
@@ -44,4 +44,27 @@ module.exports = [{
     url : 'https://developers.google.com/youtube/',
     logo : "https://lh5.ggpht.com/jZ8XCjpCQWWZ5GLhbjRAufsw3JXePHUJVfEvMH3D055ghq0dyiSP3YxfSc_czPhtCLSO=w300"
 }
+]
+
+module.exports.food = [
+    {
+        name : "food Panda",
+        url : "http://www.foodPanda.com/",
+        logo : "http://www.foodPanda.com/favicon.ico"
+    },
+    {
+        name : "food Panda 2",
+        url : "http://www.foodPanda.com/",
+        logo : "http://www.foodPanda.com/favicon.ico"
+    },
+    {
+        name : "food Panda 3",
+        url : "http://www.foodPanda.com/",
+        logo : "http://www.foodPanda.com/favicon.ico"
+    },
+    {
+        name : "food Panda 4",
+        url : "http://www.foodPanda.com/",
+        logo : "http://www.foodPanda.com/favicon.ico"
+    }
 ]

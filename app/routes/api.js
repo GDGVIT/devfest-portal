@@ -42,7 +42,10 @@ module.exports.init = function(inject){
     });
 
     router.post("/allapis",function(req,res,next){
-        return res.json(apis);
+        var category = req.body.category || "social";
+        category = category.toString();
+        var ret = apis[category];
+        return res.json(ret);
     });
 
     router.post("/slot",inter.authenticate,function(req,res,next){
