@@ -1,22 +1,4 @@
 module.exports = [{
-<<<<<<< HEAD
-    name : "dfdsfsd",
-    url : "dssfsdfdsf",
-    logo : "dfddsfsdf"
-},{
-    name : "gfgdfgjghdh",
-    url : "dssfsdfdsf",
-    logo : "dfddsfsdf"
-},{
-    name : "erewrwer45",
-    url : "dssfsdfdsf",
-    logo : "dfddsfsdf"
-},{
-    name : "dgdfhb454e",
-    url : "dssfsdfdsf",
-    logo : "dfddsfsdf"
-}]
-=======
     name : "Github API",
     url : "https://developer.github.com/v3/",
     logo : "https://pbs.twimg.com/profile_images/1978599420/electrocat.png"
@@ -63,4 +45,3 @@ module.exports = [{
     logo : "https://lh5.ggpht.com/jZ8XCjpCQWWZ5GLhbjRAufsw3JXePHUJVfEvMH3D055ghq0dyiSP3YxfSc_czPhtCLSO=w300"
 }
 ]
->>>>>>> f19e5e3cf005f113c6ecb1a7061478fe4d70175f
