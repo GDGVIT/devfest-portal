@@ -15,9 +15,11 @@ var api_names = {};
 module.exports.router = router;
 module.exports.init = function(inject){
 
-    apis.forEach(function(api){
-        api_names[api.name] = api;
-    });
+    for(var api_category in apis){
+        apis[api_category].forEach(function (api) {
+            api_names[api.name] = api;
+        });
+    }
 
     router.post("/teamapis",inter.authenticate,inter.putTeam,function(req,res){
         // if(!req.isAdmin){
@@ -189,6 +191,10 @@ module.exports.init = function(inject){
 
             });
         });
+    });
+
+    router.post("/coupons",inter.authenticate,function(req,res){
+
     });
 
     router.post("/timeline",function(req,res){
