@@ -55,96 +55,96 @@ module.exports.timeline = [
         title : "Registrations Gear Up",
         start_time : "14:00",
         end_time : "14:45",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/registrations.svg"
     },
     {
         title : "Introduction - Get Ready",
         start_time : "14:45",
         end_time : "15:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/introduction.svg"
     },
     {
         title : "Lecture by Manoranjan Padhy Social Media & Community Manager, Google Firebase",
         start_time : "15:00",
         end_time : "16:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/lecture.svg"
     },
     {
         title : "Initial Pitch",
         start_time : "16:00",
         end_time : "17:30",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/pitch.svg"
     },
     {
         title : "Hack - Get Started",
         start_time : "17:30",
         end_time : "20:30",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/hack.svg"
     },
     {
         title : "Dinner - Refil",
         start_time : "20:30",
         end_time : "21:30",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/food.svg"
     },
     {
         title : "Hack Continues",
         start_time : "21:30",
         end_time : "02:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/hack.svg"
     },
     {
         title : "Snacks - Restore",
         start_time : "02:00",
         end_time : "02:15",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/food.svg"
     },
     {
         title : "Hack Continues",
         start_time : "02:15",
         end_time : "07:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/hack.svg"
     },
     {
         title : "Breakfast",
         start_time : "07:00",
         end_time : "08:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/food.svg"
     },
     {
         title : "Hack Continues",
         start_time : "08:00",
         end_time : "13:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/hack.svg"
     },
     {
         title : "Lunch - Refil",
         start_time : "13:00",
         end_time : "14:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/food.svg"
     },
     {
         title : "Hack Continues",
         start_time : "14:00",
         end_time : "16:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/hack.svg"
     },
     {
         title : "Pitch of 20 teams - Present your Work",
         start_time : "16:00",
         end_time : "17:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/pitch.svg"
     },
     {
         title : "Lecture by Ashish Rajput - Co - Founder, Roder.in on Latest trends in technology",
         start_time : "17:00",
         end_time : "18:30",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/lecture.svg"
     },
     {
         title : "Prize distribution - Congratulations",
         start_time : "18:30",
         end_time : "19:00",
-        image_url : "http://devfest.gdgvitvellore.com/images/gdglogo.png"
+        image_url : "http://devfest.gdgvitvellore.com/images/prize.svg"
     }
 ];
