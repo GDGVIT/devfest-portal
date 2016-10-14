@@ -44,7 +44,42 @@ module.exports.social = [
     name : "Youtube Developer API`",
     url : 'https://developers.google.com/youtube/',
     logo : "http://devfest.gdgvitvellore.com/images/api/youtube.png"
-}
+},
+    {
+        name : "500 px",
+        url : 'https://developers.500px.com/',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/500px.png"
+    },
+    {
+        name : "Amazon Web Services",
+        url : 'https://aws.amazon.com/',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/amazon web services.png"
+    },
+    {
+        name : "Digital Ocean",
+        url : 'www.digitalocean.com',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/digital ocean.png"
+    },
+    {
+        name : "Google drive",
+        url : 'https://developers.google.com/drive/',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/drive.png"
+    },
+    {
+        name : "Facebook",
+        url : 'https://developers.facebook.com',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/facebook.png"
+    },
+    {
+        name : "Fitbit",
+        url : 'https://dev.fitbit.com/',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/fitbit.png"
+    },
+    {
+        name : "Flickr",
+        url : 'https://www.flickr.com/services/api/',
+        logo : "htp://devfest.gdgvitvellore.com/images/api/flickr.png"
+    }
 ]
 
 module.exports.food = [
