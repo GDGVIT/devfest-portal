@@ -237,7 +237,7 @@ module.exports.init = function(inject){
     });
 
     router.post("/redeemCoupon",inter.authenticate,function (req, res, next) {
-        if(req.user.email != "mohdakram.ansari2015@vit.ac.in"){
+        if(req.user.email != "shuvam.ghosh2014@vit.ac.in"){
             return res.json({
                 status : 401,
                 message : "Not an admin"
