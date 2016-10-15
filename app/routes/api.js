@@ -53,7 +53,18 @@ module.exports.init = function(inject){
         }
     });
 
-    router.post("/assignApis",inter.authenticate,inter.putTeam,function (req, res, next) {
+    router.post("/assignApis",function(req,res,next){
+        Team.findOne({
+            name : req.body.teamName
+        }).exec(function(err,team){
+            if(err)return res.json({
+                status : 500,
+                message : "Internal Server Error"
+            });
+            req.team = team;
+            next();
+        });
+    },function (req, res, next) {
 
         if(!req.team.apis || req.team.apis.length==0){
             req.team.apis = [
