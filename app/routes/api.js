@@ -54,6 +54,7 @@ module.exports.init = function(inject){
     });
 
     router.post("/assignApis",function(req,res,next){
+        console.log(req.body);
         Team.findOne({
             name : req.body.teamName
         }).exec(function(err,team){
@@ -321,6 +322,7 @@ module.exports.init = function(inject){
     });
 
     router.post("/redeemCoupon",inter.authenticate,function (req, res, next) {
+        console.log(req.body);
         if(req.user.email != "shuvam.ghosh2014@vit.ac.in"){
             return res.json({
                 status : 401,
