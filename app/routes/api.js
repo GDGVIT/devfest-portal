@@ -66,6 +66,10 @@ module.exports.init = function(inject){
         });
     },function (req, res, next) {
 
+        if(typeof req.body.apis == 'string'){
+            req.body.apis = JSON.parse(req.body.apis);
+        }
+
         if(!req.team.apis || req.team.apis.length==0){
             req.team.apis = [
                 api_names[req.body.apis[0]],
