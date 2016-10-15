@@ -83,6 +83,10 @@ module.exports.init = function(inject){
 
     router.post("/all",inter.authenticate,function(req,res){
         Team.find().lean().exec(function(err,teams){
+            if(err)return res.json({
+                status : 500,
+                message : "Internal Server Error"
+            })
             var ret = [];
             teams.forEach(function(team){
                 ret.push(team.name);
