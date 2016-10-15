@@ -41,7 +41,7 @@ module.exports.init = function(inject){
         // }
         if(!req.team.apis || req.team.apis.length==0){
             return res.json({
-                status : 500,
+                status : 301,
                 message : "APIs not yet assigned"
             });
         }else{
