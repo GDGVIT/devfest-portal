@@ -78,7 +78,7 @@ module.exports.social = [
     {
         name : "Flickr",
         url : 'https://www.flickr.com/services/api/',
-        logo : "http://devfest.gdgvitvellore.com/images/api/flickr.png"
+        logo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzrW4pVxPvkkXfiajKkoXrrGjZ406UXoJarMjM6jXjX6vp1Tcj"
     },
     {
         name : "Fusion Charts",
@@ -92,7 +92,7 @@ module.exports.social = [
     },
     {
         name : "Google",
-        url : "",
+        url : "https://console.developers.google.com/",
         logo : "http://devfest.gdgvitvellore.com/images/api/google.png"
     },
     {
