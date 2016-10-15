@@ -53,12 +53,12 @@ module.exports.social = [
     {
         name : "Amazon Web Services",
         url : 'https://aws.amazon.com/',
-        logo : "http://devfest.gdgvitvellore.com/images/api/amazon web services.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/amazon%20web%20services.png"
     },
     {
         name : "Digital Ocean",
         url : 'www.digitalocean.com',
-        logo : "http://devfest.gdgvitvellore.com/images/api/digital ocean.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/digital%20ocean.png"
     },
     {
         name : "Google drive",
@@ -83,12 +83,12 @@ module.exports.social = [
     {
         name : "Fusion Charts",
         url : "www.fusioncharts.com/dev/",
-        logo : "http://devfest.gdgvitvellore.com/images/api/fusion charts.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/fusion%20charts.png"
     },
     {
         name : "Fusion Tables",
         url : "https://developers.google.com/fusiontables",
-        logo : "http://devfest.gdgvitvellore.com/images/api/fusion tables.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/fusion%20tables.png"
     },
     {
         name : "Google",
@@ -98,12 +98,12 @@ module.exports.social = [
     {
         name : "Google Cloud",
         url : "https://cloud.google.com/compute/docs/api/getting-started",
-        logo : "http://devfest.gdgvitvellore.com/images/api/google cloud.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/google%20cloud.png"
     },
     {
         name : "Google Fit",
         url : "https://developers.google.com/fit/",
-        logo : "http://devfest.gdgvitvellore.com/images/api/google fit.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/google%20fit.png"
     },
     {
         name : "Linked In",
@@ -113,7 +113,7 @@ module.exports.social = [
     {
         name : "Stack Exchange",
         url : "https://api.stackexchange.com/",
-        logo : "http://devfest.gdgvitvellore.com/images/api/stack exchange.png"
+        logo : "http://devfest.gdgvitvellore.com/images/api/stack%20exchange.png"
     },
     {
         name : "Twitter",
