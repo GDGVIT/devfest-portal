@@ -322,7 +322,7 @@ module.exports.init = function(inject){
     });
 
     router.post("/redeemCoupon",inter.authenticate,function (req, res, next) {
-        console.log(req.body);
+        console.log("body :: ",JSON.stringify(req.body));
         if(req.user.email != "shuvam.ghosh2014@vit.ac.in"){
             return res.json({
                 status : 401,
