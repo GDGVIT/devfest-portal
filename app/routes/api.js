@@ -9,19 +9,28 @@ var data = require("../../data");
 var inter = require("../interceptors").api;
 var jwt = require("jsonwebtoken");
 
-var categories = [];
+var categories = ["Digital Marketing","Transportation and Logistics","Medical(MiBeat)"];
 
 var api_names = {};
+
+var api_categories = {
+    "Digital Marketing": [],
+    "Transportation and Logistics" : [],
+    "Medical(MiBeat)" : []
+};
 
 
 module.exports.router = router;
 module.exports.init = function(inject){
 
-    for(var api_category in apis){
-        apis[api_category].forEach(function (api) {
-            api_names[api.name] = api;
+    apis.forEach(function(api){
+        api_names[api.name] = api;
+        api.category.forEach(function(cat){
+            api_categories[cat] = api;
         });
-    }
+    });
+
+
 
     router.post("/teamapis",inter.authenticate,inter.putTeam,function(req,res){
         // if(!req.isAdmin){
@@ -46,10 +55,14 @@ module.exports.init = function(inject){
     });
 
     router.post("/allapis",function(req,res,next){
-        var category = req.body.category || "social";
-        category = category.toString();
-        var ret = apis[category];
-        return res.json(ret);
+        if(!req.body.category){
+            return res.json(apis)
+        }else{
+            var category = req.body.category.toString();
+            category = category.toString();
+            var ret = api_categories[category];
+            return res.json(ret);
+        }
     });
 
     router.post("/all",inter.authenticate,function(req,res){
