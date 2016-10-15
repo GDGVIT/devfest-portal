@@ -70,6 +70,21 @@ module.exports.init = function(inject){
         });
     })
 
+    router.post("/clearAssignedApis",inter.authenticate,inter.putTeam,function(req,res,next){
+        req.team.apis = undefined;
+        req.team.save(function(err){
+            if(err)return res.sendStatus(500);
+            return res.sendStatus(200);
+        })
+    });
+
+    router.get("/lonelyUsers",function (req, res, next) {
+        User.find({team : {'$exists':false}}).lean().exec(function(err,users){
+            if(err)return res.sendStatus(500);
+            return res.json(users);
+        });
+    });
+
     router.post("/allapis",function(req,res,next){
         if(!req.body.category){
             return res.json(apis)

@@ -30,7 +30,7 @@ module.exports.init = function(inject){
     });
 
     router.get("/users",function(req,res){
-        User.find({},function(err,users){
+        User.find({}).populate("team").exec(function(err,users){
             if(err)return res.sendStatus(500);
             res.locals.users = users;
             return res.render("admin_usersList");

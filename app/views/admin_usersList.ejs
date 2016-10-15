@@ -35,7 +35,7 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>regNo</th>
-                        
+                        <th>Team</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,7 +44,8 @@
                             <td><%= index %></td>
                             <td><%= u.name %></td>
                             <td><%= u.regNo %></td>
-                            
+                            <td><%= u.team ? u.team.name : "" %></td>
+                            <td><a href="/admin/user/<%- u.email %>" class="button button-primary">View</a></td>
                         </tr>
                     <% }) %>
                 </tbody>
