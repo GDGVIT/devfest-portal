@@ -9,6 +9,8 @@ var data = require("../../data");
 var inter = require("../interceptors").api;
 var jwt = require("jsonwebtoken");
 
+var categories = [];
+
 var api_names = {};
 
 
@@ -48,6 +50,21 @@ module.exports.init = function(inject){
         category = category.toString();
         var ret = apis[category];
         return res.json(ret);
+    });
+
+    router.post("/all",inter.authenticate,function(req,res){
+        Team.find().lean().exec(function(err,teams){
+            var ret = [];
+            teams.forEach(function(team){
+                ret.push(team.name);
+            });
+            return res.json({
+                status : 200,
+                message : "ok",
+                teams : ret,
+                categories : categories
+            })
+        })
     });
 
     router.post("/slot",inter.authenticate,function(req,res,next){
