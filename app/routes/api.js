@@ -321,14 +321,14 @@ module.exports.init = function(inject){
         });
     });
 
-    router.post("/redeemCoupon",inter.authenticate,function (req, res, next) {
+    router.post("/redeemCoupon",function (req, res, next) {
         console.log("body :: ",JSON.stringify(req.body));
-        if(req.user.email != "shuvam.ghosh2014@vit.ac.in"){
-            return res.json({
-                status : 401,
-                message : "Not an admin"
-            });
-        }
+        // if(req.user.email != "shuvam.ghosh2014@vit.ac.in"){
+        //     return res.json({
+        //         status : 401,
+        //         message : "Not an admin"
+        //     });
+        // }
         if(!req.body.coupon){
             return res.json({
                 status : 400,
