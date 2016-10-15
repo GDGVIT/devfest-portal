@@ -207,6 +207,7 @@ module.exports.init = function(inject){
                 couponType : type,
                 used : false
             });
+            next();
         });
     }
 
@@ -215,7 +216,7 @@ module.exports.init = function(inject){
             req.user.coupons = [];
             generateCoupon(req,res,"dinner",function () {
                 generateCoupon(req,res,"snacks",function () {
-                    req.user.save(function(err){
+                    req.user.sa ve(function(err){
                         if(err)return res.json({
                             status : 500,
                             message : "Internal Server Error"
