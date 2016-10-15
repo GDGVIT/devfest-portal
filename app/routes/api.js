@@ -40,10 +40,26 @@ module.exports.init = function(inject){
         //     });
         // }
         if(!req.team.apis || req.team.apis.length==0){
+            return res.json({
+                status : 500,
+                message : "APIs not yet assigned"
+            });
+        }else{
+            return res.json({
+                status : 200,
+                message : "ok",
+                apis : req.team.apis
+            });
+        }
+    });
+
+    router.post("/assignApis",inter.authenticate,inter.putTeam,function (req, res, next) {
+
+        if(!req.team.apis || req.team.apis.length==0){
             req.team.apis = [
-                apis[Math.floor(Math.random()*apis.length)],
-                apis[Math.floor(Math.random()*apis.length)],
-                apis[Math.floor(Math.random()*apis.length)]
+                api_names[req.body.apis[0]],
+                api_names[req.body.apis[1]],
+                api_names[req.body.apis[2]],
             ];
             req.team.save();
         }
@@ -52,7 +68,7 @@ module.exports.init = function(inject){
             message : "ok",
             apis : req.team.apis
         });
-    });
+    })
 
     router.post("/allapis",function(req,res,next){
         if(!req.body.category){
