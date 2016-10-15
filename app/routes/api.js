@@ -256,11 +256,15 @@ module.exports.init = function(inject){
                             members : []
                         };
                         team.members.forEach(function(member){
-                            json.team.members.push({
-                                name : member.user.name,
-                                status : member.status,
-                                position : member.status
-                            });
+                            try{
+                                json.team.members.push({
+                                    name : member.user.name,
+                                    status : member.status,
+                                    position : member.status
+                                });
+                            }catch(err){
+                                console.log(err);
+                            }
                         });
                         if(team.admin.toString() == user._id.toString()){
                             json.user.isAdmin = true;
