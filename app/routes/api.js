@@ -332,6 +332,13 @@ module.exports.init = function(inject){
         });
     });
 
+    router.get("/allTeams",function(req,res){
+        Team.find().lean().exec(function(err,teams){
+            if(err)return res.sendStatus(500);
+            res.json(teams);
+        })
+    })
+
     router.post("/faq",function(req,res){
         return res.json({
             status : 200,
