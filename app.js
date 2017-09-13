@@ -5,9 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require("express-flash");
-var config = require("./config");
-
-global.config = config;
+//var config = require("./config");
+var dotenv = require("dotenv");
+dotenv.config()
+//global.config = config;
 
 var mongoose = require("mongoose");
 var passport = require('passport');
@@ -62,7 +63,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect(config.db);
+mongoose.connect(process.env.MONGO);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

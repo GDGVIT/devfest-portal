@@ -3,7 +3,7 @@ var passport = require('passport');
 var User = require("../models/user");
 var Team = require("../models/team");
 var router = express.Router();
-var config = require("../../config");
+//var config = require("../../config");
 var apis = require("../../apis");
 var data = require("../../data");
 var inter = require("../interceptors").api;
@@ -214,7 +214,7 @@ module.exports.init = function(inject){
                 });
                 jwt.sign({
                     uid : user._id.toString()
-                }, config.api.signingKey, { algorithm: "HS256" }, function(err, token) {
+                }, process.env.SECRET, { algorithm: "HS256" }, function(err, token) {
                     if(err)return res.json({
                         status : 500,
                         message : "Internal Server Error"
@@ -282,7 +282,7 @@ module.exports.init = function(inject){
         jwt.sign({
             userId : req.user._id.toString(),
             id : req.user.coupons.length
-        },config.api.signingKey,{algorithm : "HS256"},function (err, token) {
+        },process.env.SECRET,{algorithm : "HS256"},function (err, token) {
             if(err)return res.json({
                 status : 500,
                 message : "Internal Server Error"
@@ -335,7 +335,7 @@ module.exports.init = function(inject){
                 message : "Bad request"
             });
         }
-        jwt.verify(req.body.coupon.toString(),config.api.signingKey,function (err, obj) {
+        jwt.verify(req.body.coupon.toString(),process.env.SECRET,function (err, obj) {
             if(err){
                 return res.json({
                     status : 500,

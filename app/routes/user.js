@@ -3,7 +3,7 @@ var passport = require('passport');
 var User = require("../models/user");
 var Team = require("../models/team");
 var router = express.Router();
-var config = require("../../config");
+//var config = require("../../config");
 var inter = require("../interceptors");
 
 module.exports.router = router;

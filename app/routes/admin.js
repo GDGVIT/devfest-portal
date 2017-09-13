@@ -3,7 +3,7 @@ var passport = require('passport');
 var User = require("../models/user");
 var email = require("../util/email");
 var router = express.Router();
-var config = require("../../config");
+//var config = require("../../config");
 
 var basicAuth = require('basic-auth');
 
@@ -22,7 +22,7 @@ module.exports.init = function(inject){
           return unauthorized(res);
         };
 
-        if (config.admins.indexOf(user.name+":"+user.pass) >= 0) {
+        if (user.name+":"+user.pass == process.env.ADMIN) {
           return next();
         } else {
           return unauthorized(res);
@@ -50,6 +50,6 @@ module.exports.init = function(inject){
                 u : user
             });
         });
-    }); 
+    });
 
 }

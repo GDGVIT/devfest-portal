@@ -1022,7 +1022,6 @@ nav{
 }
 .sponsor img{
   margin-top:10px;
-  width:100%;
 }
 .custom-gradient{
   background: -webkit-linear-gradient(#babcbe, #ffffff); /* For Safari 5.1 to 6.0 */
@@ -1038,6 +1037,13 @@ nav{
   position:absolute;
   top:6%;
   right:3%;
+}
+.sponsor img{
+  max-width:90%;
+}
+/*width of sponsors*/
+.other-sponsors img{
+  /*max-width: 95%;       */
 }
 @media(max-width:360px){
   .homepage-buttons .register-button .custom-yellow-background{
@@ -1059,5 +1065,10 @@ nav{
 @media(max-width: 600px){
   #register_form{
     width: 80%;
+  }
+}
+@media(min-width: 700px){
+  #tech{
+    transform: translateY(-30px);
   }
 }

@@ -1,5 +1,5 @@
 var passport = require('passport');
-var config = require("../config");
+//var config = require("../config");
 var jwt = require("jsonwebtoken");
 var User = require("./models/user");
 var Team = require("./models/team");
@@ -60,7 +60,7 @@ $.api.authenticate = function(req,res,next){
         status : 401,
         message : "Token not found"
     });
-    jwt.verify(token,config.api.signingKey,function(err,obj){
+    jwt.verify(token,process.env.SECRET,function(err,obj){
         if(err)return res.json({
             status : 400,
             message : "Invalid token found"

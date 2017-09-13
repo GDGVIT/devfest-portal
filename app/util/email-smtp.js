@@ -1,20 +1,20 @@
 var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
-var config = require("../../config");
+//var config = require("../../config");
 var fs = require("fs");
 
 var jwt = require("jsonwebtoken");
 
 var emailFormat = fs.readFileSync(__dirname+"/emailFormat.txt","utf8");
 
-var signingKey = config.signingKey;
+var signingKey = process.env.SECRET;
 
 var options = {
     host: 'smtp.gmail.com',
     port: 25,
     auth: {
-        user: config.gmail.user,
-        pass: config.gmail.password
+        user: process.env.GMAIL_USERNAME,
+        pass: process.env.GMAIL_PASSWORD
     }
 };
 
@@ -29,7 +29,7 @@ module.exports.sendMail = function(user,callback){
         sentAt : new Date().getTime
     }, signingKey, { algorithm: "HS256" }, function(err, token) {
         if(err)return callback(err);
-        var link = config.verificationLink + token;
+        var link = process.env.VERIFICATION_LINK + token;
         var html = emailFormat.split("{{link}}").join(link);
 
         console.log("Link generated");

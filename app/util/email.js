@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 var sgTransport = require('nodemailer-sendgrid-transport');
-var config = require("../../config");
+//var config = require("../../config");
 
 var jwt = require("jsonwebtoken");
 var fs = require("fs")
@@ -8,12 +8,12 @@ var fs = require("fs")
 var emailFormat = fs.readFileSync(__dirname+"/emailFormat.txt","utf8");
 console.log("Email format loaded");
 
-var signingKey = config.signingKey;
+var signingKey = process.env.SECRET;
 
 var options = {
     auth: {
-        api_user: config.sendgrid.username,
-        api_key:  config.sendgrid.password
+        api_user: process.env.SENGRID_USERNAME,
+        api_key:  process.env.SENDGRID_PASSWORD
     }
 }
 

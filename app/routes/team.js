@@ -3,11 +3,11 @@ var passport = require('passport');
 var User = require("../models/user");
 var Team = require("../models/team");
 var router = express.Router();
-var config = require("../../config");
+//var config = require("../../config");
 var inter = require("../interceptors");
 var apis = require("../../apis.js");
 
-var maxMembers = config.maxMembers;
+var maxMembers = parseInt(process.env.MAX_MEMBERS);
 
 module.exports.router = router;
 module.exports.init = function(inject){

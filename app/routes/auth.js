@@ -1,10 +1,10 @@
 var express = require("express");
 var passport = require('passport');
 var User = require("../models/user");
-var config = require("../../config");
+//var config = require("../../config");
 var email = require("../util/email-smtp");
 var router = express.Router();
-var msg91 = require("msg91")(config.msg91.apiKey, "GDGVIT", "transactional" );
+var msg91 = require("msg91")(process.env.MSG_91, "GDGVIT", "transactional" );
 
 module.exports.router = router;
 module.exports.init = function(inject){
