@@ -21,7 +21,7 @@
     "mongoose": "^4.11.11",
     "morgan": "~1.6.1",
     "msg91": "latest",
-    "nodemailer": "latest",
+    "nodemailer": "6.4.16",
     "nodemailer-postmark-transport": "latest",
     "nodemailer-sendgrid-transport": "latest",
     "nodemailer-smtp-transport": "latest",
