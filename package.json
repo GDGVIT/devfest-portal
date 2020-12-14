@@ -18,7 +18,7 @@
     "express-flash": "latest",
     "express-session": "latest",
     "jsonwebtoken": "latest",
-    "mongoose": "^4.11.11",
+    "mongoose": "^5.11.7",
     "morgan": "~1.6.1",
     "msg91": "latest",
     "nodemailer": "latest",
